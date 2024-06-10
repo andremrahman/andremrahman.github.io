@@ -1,8 +1,17 @@
+/* html {
+  overflow-x: hidden;
+} */
+
 body {
   min-height: 2000px;
 }
 
-.jumbotron {
+.jumbotron,
+.projects {
   padding-top: 2rem;
   background-color: #d5fbfe;
+}
+
+.img-size {
+  object-fit: cover;
 }
