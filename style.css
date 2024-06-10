@@ -20,3 +20,7 @@ body {
   object-fit: cover;
   background-color: #0ba2ff;
 }
+
+section {
+  scroll-margin-top: 5rem;
+}
