@@ -147,28 +147,51 @@
         <div class="text-center mb-3">
           <h2>Contact Me</h2>
         </div>
-        <form action="">
+        <form name="contact-form">
           <div class="row justify-content-center mb-2">
             <div class="col-8">
-              <label for="input-name" class="form-label">Full Name</label>
-              <input type="text" id="input-name" name="input-name" class="form-control shadow" placeholder="Your full name" />
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control shadow" placeholder="Your full name" required />
             </div>
           </div>
           <div class="row justify-content-center mb-2">
             <div class="col-8">
-              <label for="input-email" class="form-label">Email</label>
-              <input type="email" id="input-email" name="input-email" class="form-control shadow" placeholder="example@mail.com" />
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control shadow" placeholder="example@mail.com" required />
             </div>
           </div>
           <div class="row justify-content-center mb-2">
             <div class="col-8">
-              <label for="input-message" class="form-label">Message</label>
-              <textarea id="input-message" name="" rows="7" class="form-control shadow" placeholder="Write your message here..."></textarea>
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" rows="7" class="form-control shadow" placeholder="Write your message here..." required></textarea>
             </div>
           </div>
           <div class="d-flex justify-content-center m-5">
-            <button type="submit" class="btn btn-primary">Send</button>
+            <button class="btn btn-primary btn-send" type="submit">Send</button>
+
+            <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+              <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+              <span role="status">Loading...</span>
+            </button>
           </div>
+          <!-- modal -->
+          <div id="myModal" class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Already Sent!</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                  <i id="modal-check" class="bi bi-check-circle text-success"></i>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- modal end -->
         </form>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

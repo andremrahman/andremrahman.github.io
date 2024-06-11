@@ -24,3 +24,7 @@ body {
 section {
   scroll-margin-top: 5rem;
 }
+
+#modal-check {
+  font-size: 100px;
+}
