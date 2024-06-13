@@ -28,3 +28,11 @@ section {
 #modal-check {
   font-size: 100px;
 }
+
+.gallery-img {
+  width: 100%;
+}
+
+#gallery .row > * {
+  padding: 0;
+}
