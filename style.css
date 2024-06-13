@@ -11,7 +11,8 @@ body {
 }
 
 .jumbotron,
-.projects {
+.projects,
+.contact {
   padding-top: 2rem;
   background-color: #d5fbfe;
 }
