@@ -50,7 +50,7 @@
     <section class="jumbotron text-center">
       <img src="img/pict.jpg" alt="profile" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Andre M Rahman</h1>
-      <p class="lead">Bachelor of Computer Science | Web Engineering Enthusiast</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="white"
@@ -296,6 +296,19 @@
       AOS.init({
         once: true,
       });
+    </script>
+
+    <!-- GSAP -->
+    <!--? https://gsap.com -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <!-- GSAP plugin text -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin); //GSAP plugin text registration
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Bachelor of Computer Science | Web Engineering Enthusiast" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: 50, opacity: 0, delay: 0.5, ease: "back" });
     </script>
 
     <!-- js custom -->
