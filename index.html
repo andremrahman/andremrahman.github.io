@@ -215,6 +215,40 @@
     </section>
     <!-- gallery end -->
 
+    <!-- !KB -->
+    <section id="car" class="car">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <h2>Sport Car (using tilt JS)</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="car-box">
+              <h4 class="car-name text-dark">Lamborghini Aventador</h4>
+              <img src="img/car/1.png" alt="Lamborghini Aventador" class="car-img" />
+              <a href="#" class="btn btn-dark btn-car-detail">Show Details</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="car-box">
+              <h4 class="car-name text-dark">BMW M2</h4>
+              <img src="img/car/2.png" alt="BMW M2" class="car-img" />
+              <a href="#" class="btn btn-dark btn-car-detail">Show Details</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="car-box">
+              <h4 class="car-name text-dark">Koenigsegg Agera</h4>
+              <img src="img/car/3.png" alt="Koenigsegg Agera" class="car-img" />
+              <a href="#" class="btn btn-dark btn-car-detail">Show Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- contact -->
     <section id="contact" class="contact">
       <div class="container">
@@ -316,6 +350,19 @@
       gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
       gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
       gsap.from(".display-4", { duration: 1, x: 50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
+    <!-- tilt.js -->
+    <!--? https://micku7zu.github.io/vanilla-tilt.js/ -->
+    <script type="text/javascript" src="vanilla-tilt.min.js"></script>
+    <!-- js options for tilt.js -->
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".car-box"), {
+        max: 25,
+        speed: 1000,
+        scale: 1.1,
+        glare: true,
+      });
     </script>
 
     <!-- js custom -->
