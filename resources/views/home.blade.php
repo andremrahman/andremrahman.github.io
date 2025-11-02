@@ -1,6 +1,6 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
-  <section id="hero">
+  <section id="hero" class="">
     <p>Kami berkomitmen menghadirkan hasil konstruksi terbaik dengan mengutamakan ketepatan waktu, mutu, dan kepuasan
       klien.</p>
     <a class="group inline-block rounded-xl bg-linear-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden"
@@ -11,7 +11,7 @@
     </a>
 
   </section>
-  <section id="profil">
+  <section id="profil" class="">
     <h2>Profil Perusahaan</h2>
     <p class="mb-5">Berbekal keahlian dan pengalaman dalam menangani proyek-proyek prestisius berskala menengah dan
       besar. <strong>PT Gajahmada Karya Mandiri (GKM)</strong> berpengalaman dalam perancanaan dan pembangunan pabrik,
@@ -43,9 +43,10 @@
 
     </p>
   </section>
-  <section id="visimisi">
+  <section id="visimisi" class="">
     <h2>Visi</h2>
-    <p>Menjadi Perusahaan Jasa Konstruksi yang terkemuka dan terpecaya dengan menyediakan produk-produk berkualitas dan
+    <p>Menjadi Perusahaan Jasa Konstruksi yang terkemuka dan terpecaya dengan menyediakan produk-produk berkualitas
+      dan
       menciptakan nilai yang optimal bagi pelanggan, pemegang saham, karyawan dan masyarakat Mendukung kemajuan
       pembangunan bangsa Indonesia melalui pembangunan proyek berskala besar maupun kecil, untuk memberikan kepuasan
       pelanggan melalui ketepatan dalam segi kualitas, waktu penyelesaian pekerjaan dan biaya dengan didukung oleh
@@ -63,10 +64,11 @@
       <li>Edukasi terencana untuk peningkatan kompetensi karyawan</li>
     </ul>
   </section>
-  <section id="sdm">
+  <section id="sdm" class="">
     <h2>Sumber Daya Manusia</h2>
     <p>Tim kami mempunyai komitmen tinggi untuk memenuhi kebutuhan proyek dengan keahlian yang mereka miliki. Kami
-      mempunyai sumber daya manusia dari berbagai disiplin ilmu untuk memaksimalkan kualitas yang akan kami sampaikan ke
+      mempunyai sumber daya manusia dari berbagai disiplin ilmu untuk memaksimalkan kualitas yang akan kami sampaikan
+      ke
       klien.
     </p>
     <p>GKM dapat memenuhi harapan mitra sekarang dan nanti. GKM selalu berusaha menjaga kualitas sumber daya manusia.

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-full bg-gray-100">
+<html lang="id" class="bg-gray-200 overflow-hidden">
 
 <head>
   <meta charset="UTF-8">
@@ -12,18 +12,12 @@
   <title>{{ $title }}</title>
 </head>
 
-<body class="h-full">
-  <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-
-  <div class="min-h-full">
-    <x-navbar></x-navbar>
-    <main>
-      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
-        <!-- Your content -->
-        {{ $slot }}
-      </div>
-    </main>
-  </div>
+<body>
+  <x-navbar></x-navbar>
+  <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+    <!-- Your content -->
+    {{ $slot }}
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
 </body>
