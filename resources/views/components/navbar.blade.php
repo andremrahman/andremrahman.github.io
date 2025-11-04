@@ -19,8 +19,9 @@
       </div>
       <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
         <div class="flex shrink-0 items-center sm:mr-auto">
-          <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"
-            class="h-8 w-auto" />
+          <a href="/">
+            <img src="img/logo.png" alt="GKM Logo" class="h-8 w-auto" />
+          </a>
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">

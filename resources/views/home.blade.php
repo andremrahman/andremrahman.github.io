@@ -1,16 +1,31 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
-  <section id="hero" class="">
-    <p>Kami berkomitmen menghadirkan hasil konstruksi terbaik dengan mengutamakan ketepatan waktu, mutu, dan kepuasan
-      klien.</p>
-    <a class="group inline-block rounded-xl bg-linear-to-r from-pink-500 via-red-500 to-yellow-500 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden"
-      href="#">
-      <span class="block rounded-lg bg-white px-8 py-3 text-sm font-medium group-hover:bg-transparent">
-        Lihat Layanan Kami
-      </span>
-    </a>
+  <section id="hero" class="sm:bg-black text-4xl">
+    <div class="flex flex-wrap relative">
+      <div class="absolute sm:relative w-full sm:w-1/2 aspect-2/3">
+        <div class="absolute h-full w-full bg-gray-800 opacity-50 z-1"></div>
+        <div class="absolute h-full w-full z-2 justify-center px-4 sm:px-6 lg:px-20 flex flex-col items-start text-xl">
 
+          <img src="img/logo.png" alt="GKM Logo" class="w-1/2 mb-10 self-center">
+          <p class="text-white text-shadow-lg/50 font-poppins">Kami berkomitmen menghadirkan hasil konstruksi terbaik
+            dengan
+            mengutamakan ketepatan waktu,
+            mutu, dan
+            kepuasan klien.</p>
+          <a class="mt-5 group block rounded-xl bg-linear-to-r from-gray-700 via-red-500 to-gray-200 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden z-2"
+            href="/layanan">
+            <span class="block rounded-lg bg-white px-5 py-2 text-xs font-medium text-black group-hover:bg-transparent">
+              Lihat Layanan Kami
+            </span>
+          </a>
+        </div>
+      </div>
+      <div class="w-full sm:w-1/2 bg-blue-500">
+        <img src="img/hero.webp" alt="hero" class="w-full sm:ml-auto aspect-2/3">
+      </div>
+    </div>
   </section>
+
   <section id="profil" class="">
     <h2>Profil Perusahaan</h2>
     <p class="mb-5">Berbekal keahlian dan pengalaman dalam menangani proyek-proyek prestisius berskala menengah dan
