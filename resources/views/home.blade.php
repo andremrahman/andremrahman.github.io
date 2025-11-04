@@ -3,7 +3,7 @@
   <section id="hero" class="sm:bg-black text-4xl">
     <div class="flex flex-wrap relative">
       <div class="absolute sm:relative w-full sm:w-1/2 aspect-2/3">
-        <div class="absolute h-full w-full bg-gray-800 opacity-50 z-1"></div>
+        <div class="absolute h-full w-full bg-zinc-800 opacity-50 z-1"></div>
         <div class="absolute h-full w-full z-2 justify-center px-4 sm:px-6 lg:px-20 flex flex-col items-start text-xl">
 
           <img src="img/logo.png" alt="GKM Logo" class="w-1/2 mb-10 self-center">
