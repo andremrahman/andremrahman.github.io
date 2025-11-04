@@ -7,11 +7,9 @@
         <div class="absolute h-full w-full z-2 justify-center px-4 sm:px-6 lg:px-20 flex flex-col items-start text-xl">
 
           <img src="img/logo.png" alt="GKM Logo" class="w-1/2 mb-10 self-center">
-          <p class="text-white text-shadow-lg/50 font-poppins">Kami berkomitmen menghadirkan hasil konstruksi terbaik
-            dengan
-            mengutamakan ketepatan waktu,
-            mutu, dan
-            kepuasan klien.</p>
+          <p class="text-white text-shadow-lg/50 font-poppins">
+            Kami berkomitmen menghadirkan hasil konstruksi terbaik
+            dengan mengutamakan ketepatan waktu, mutu, dan kepuasan klien.</p>
           <a class="mt-5 group block rounded-xl bg-linear-to-r from-gray-700 via-red-500 to-gray-200 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden z-2"
             href="/layanan">
             <span class="block rounded-lg bg-white px-5 py-2 text-xs font-medium text-black group-hover:bg-transparent">
