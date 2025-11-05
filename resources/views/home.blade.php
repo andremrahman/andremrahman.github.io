@@ -3,56 +3,34 @@
   <section id="hero" class="bg-gray-200 w-full min-h-[calc(100vh-4rem)] flex items-center justify-center px-6">
     <div class="max-w-6xl w-full">
       <div class="text-xl">
-        <p class="font-poppins">
-          <svg class="inline mb-3" height=".8rem" width=".8rem" version="1.1" id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
-            xml:space="preserve" fill="#000000" transform="rotate(180)">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <g>
-                <g id="right_x5F_quote">
-                  <g>
-                    <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
-                    <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
-                    </path>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
-
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">PT Gajahmada Karya Mandiri</h2>
+        <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-6 font-monsterrat">
           Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik
           dengan mengutamakan ketepatan waktu, mutu, dan kepuasan klien.
-          <svg class="inline mb-3" height=".8rem" width=".8rem" version="1.1" id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
-            xml:space="preserve" fill="#000000">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <g>
-                <g id="right_x5F_quote">
-                  <g>
-                    <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
-                    <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
-                    </path>
-                  </g>
-                </g>
-              </g>
-            </g>
-          </svg>
         </p>
-        <button
-          class="mt-5 group rounded-xl bg-linear-to-r from-gray-700 via-red-500 to-gray-200 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden z-2">
-          <a href="/layanan">
-            <span class="block rounded-lg bg-white px-5 py-2 text-xs font-medium text-black group-hover:bg-transparent">
-              Lihat Layanan Kami
-            </span>
-          </a>
-        </button>
+        <a href="/layanan"
+          class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+          <span
+            class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
+          <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </span>
+          <span
+            class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Lihat
+            Layanan Kami</span>
+        </a>
       </div>
-
     </div>
+
   </section>
 
   <section id="profil" class="">

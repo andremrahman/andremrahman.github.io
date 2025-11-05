@@ -9,7 +9,8 @@
   {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
 
   @vite('resources/css/app.css')
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/hamburger.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <title>{{ $title }}</title>
 </head>
 
@@ -20,7 +21,7 @@
   {{-- </main> --}}
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-  <script src="js/script.js"></script>
+  <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
 </html>

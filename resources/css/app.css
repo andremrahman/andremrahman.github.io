@@ -7,13 +7,17 @@
 
 @font-face {
     font-family: "Poppins";
-    src: url("../../public/fonts/Poppins/Poppins-Regular.ttf")
-        format("truetype");
+    src: url("../../public/fonts/Poppins-Regular.woff2") format("woff2");
 }
 
 @font-face {
     font-family: "Lato";
-    src: url("../../public/fonts/Lato/Lato-Regular.ttf") format("truetype");
+    src: url("../../public/fonts/Lato-Regular.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Monsterrat";
+    src: url("../../public/fonts/Montserrat-Regular.woff2") format("woff2");
 }
 
 @theme {
@@ -25,5 +29,8 @@
         "Noto Color Emoji";
     --font-lato: "Lato", "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-monsterrat: "Monsterrat", "Instrument Sans", ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 }
