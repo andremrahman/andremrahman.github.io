@@ -1,60 +1,106 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
-  <section id="hero" class="sm:bg-black text-4xl">
-    <div class="flex flex-wrap relative">
-      <div class="absolute sm:relative w-full sm:w-1/2 aspect-2/3">
-        <div class="absolute h-full w-full bg-zinc-800 opacity-50 z-1"></div>
-        <div class="absolute h-full w-full z-2 justify-center px-4 sm:px-6 lg:px-20 flex flex-col items-start text-xl">
+  <section id="hero" class="bg-gray-200 w-full min-h-[calc(100vh-4rem)] flex items-center justify-center px-6">
+    <div class="max-w-6xl w-full">
+      <div class="text-xl">
+        <p class="font-poppins">
+          <svg class="inline mb-3" height=".8rem" width=".8rem" version="1.1" id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+            xml:space="preserve" fill="#000000" transform="rotate(180)">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g id="right_x5F_quote">
+                  <g>
+                    <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
+                    <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
+                    </path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
 
-          <img src="img/logo.png" alt="GKM Logo" class="w-1/2 mb-10 self-center">
-          <p class="text-white text-shadow-lg/50 font-poppins">
-            Kami berkomitmen menghadirkan hasil konstruksi terbaik
-            dengan mengutamakan ketepatan waktu, mutu, dan kepuasan klien.</p>
-          <a class="mt-5 group block rounded-xl bg-linear-to-r from-gray-700 via-red-500 to-gray-200 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden z-2"
-            href="/layanan">
+          Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik
+          dengan mengutamakan ketepatan waktu, mutu, dan kepuasan klien.
+          <svg class="inline mb-3" height=".8rem" width=".8rem" version="1.1" id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32"
+            xml:space="preserve" fill="#000000">
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <g id="SVGRepo_iconCarrier">
+              <g>
+                <g id="right_x5F_quote">
+                  <g>
+                    <path style="fill:#030104;" d="M0,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H0z"></path>
+                    <path style="fill:#030104;" d="M20,4v12h8c0,4.41-3.586,8-8,8v4c6.617,0,12-5.383,12-12V4H20z">
+                    </path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </p>
+        <button
+          class="mt-5 group rounded-xl bg-linear-to-r from-gray-700 via-red-500 to-gray-200 p-0.5 hover:text-white focus:ring-3 focus:outline-hidden z-2">
+          <a href="/layanan">
             <span class="block rounded-lg bg-white px-5 py-2 text-xs font-medium text-black group-hover:bg-transparent">
               Lihat Layanan Kami
             </span>
           </a>
-        </div>
+        </button>
       </div>
-      <div class="w-full sm:w-1/2 bg-blue-500">
-        <img src="img/hero.webp" alt="hero" class="w-full sm:ml-auto aspect-2/3">
-      </div>
+
     </div>
   </section>
 
   <section id="profil" class="">
-    <h2>Profil Perusahaan</h2>
-    <p class="mb-5">Berbekal keahlian dan pengalaman dalam menangani proyek-proyek prestisius berskala menengah dan
-      besar. <strong>PT Gajahmada Karya Mandiri (GKM)</strong> berpengalaman dalam perancanaan dan pembangunan pabrik,
-      apartemen, gedung
-      komersial, hotel, rumah sakit, infrastruktur (jembatan, pembukaan kawasan industri, jalan tol, jalan raya,
-      flyover) serta pekerjaan pemancangan tiang pancang yang dikerjakan tersebar di berbagai daerah di Indonesia.
-    <p class="mb-5">
-      PT Gajahmada Karya Mandiri (GKM) selalu berupaya memberikan hasil yang sesuai dengan kontrak yang disepakati.
-      Dengan pengalaman dan keterampilan yang teruji, kami bangga untuk memberikan solusi dan layanan terbaik untuk
-      menggapai tujuan proyek anda.
-      Kualitas sumber daya manusia dan profesionalitas menjadi kunci kehandalan layanan kami. Kami mengandalkan tenaga
-      profesional yang mahir dibidangnya untuk senantiasa memberikan solusi terbaik dalam kebutuhan konstruksi.
+    <div>
+      <h2>Profil Perusahaan</h2>
+      <div class="flex">
+        <div>
+          <p class="mb-5">Berbekal keahlian dan pengalaman dalam menangani proyek-proyek prestisius berskala menengah
+            dan
+            besar. <strong>PT Gajahmada Karya Mandiri (GKM)</strong> berpengalaman dalam perancanaan dan pembangunan
+            pabrik,
+            apartemen, gedung
+            komersial, hotel, rumah sakit, infrastruktur (jembatan, pembukaan kawasan industri, jalan tol, jalan raya,
+            flyover) serta pekerjaan pemancangan tiang pancang yang tersebar di berbagai daerah di Indonesia.
+          </p>
+          <p class="mb-5">
+            PT Gajahmada Karya Mandiri (GKM) selalu berupaya memberikan hasil yang sesuai dengan kontrak yang
+            disepakati.
+            Dengan pengalaman dan keterampilan yang teruji, kami bangga untuk memberikan solusi dan layanan terbaik
+            untuk
+            menggapai tujuan proyek anda.
+            Kualitas sumber daya manusia dan profesionalitas menjadi kunci kehandalan layanan kami. Kami mengandalkan
+            tenaga
+            profesional yang mahir dibidangnya untuk senantiasa memberikan solusi terbaik dalam kebutuhan konstruksi.
+          </p>
+        </div>
+        <div>
 
-    <p class="mb-5">
-      PT Gajahmada Karya Mandiri (GKM) bergerak di jasa kontraktor umum dengan pelayanan yang lengkap dan menyeluruh
-      meliputi : perencanaan, desain, hingga pembangunan (plan, design and build).
+          <p class="mb-5">
+            PT Gajahmada Karya Mandiri (GKM) bergerak di jasa kontraktor umum dengan pelayanan yang lengkap dan
+            menyeluruh
+            meliputi : perencanaan, desain, hingga pembangunan (plan, design and build).
+          </p>
+          <p class="mb-5">
 
-    </p>
-    </p>
-    <p class="mb-5">
+            Dalam penanganan proyek-proyeknya, kami juga menawarkan kemungkinan pelaksanaan pekerjaan melalui kerjasama
+            operasi (joint operation).
+            Melaksanakan jasa konstruksi secara joint operation. Dalam skema ini kami membuka kemungkinan untuk bekerja
+            sama
+            dengan perusahaan konstruksi lain, baik lokal ataupun asing untuk mengerjakan proyek secara bersama-sama.
+            Memberikan jasa konstruksi secara menyeluruh yang meliputi perencanaan awal, desain, detail penanganan
+            hingga
+            konstruksi dengan jaminan harga dan waktu penyelesaian yang efektif dan efisien.
+          </p>
+        </div>
 
-      Dalam penanganan proyek-proyeknya, kami juga menawarkan kemungkinan pelaksanaan pekerjaan melalui kerjasama
-      operasi (joint operation).
-      Melaksanakan jasa konstruksi secara joint operation. Dalam skema ini kami membuka kemungkinan untuk bekerja sama
-      dengan perusahaan konstruksi lain, baik lokal ataupun asing untuk mengerjakan proyek secara bersama-sama.
-      Memberikan jasa konstruksi secara menyeluruh yang meliputi perencanaan awal, desain, detail penanganan hingga
-      konstruksi dengan jaminan harga dan waktu penyelesaian yang efektif dan efisien.
-    </p>
-
-    </p>
+      </div>
+    </div>
   </section>
   <section id="visimisi" class="">
     <h2>Visi</h2>
