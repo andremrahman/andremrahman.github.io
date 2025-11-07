@@ -8,6 +8,7 @@
   {{-- alpine.js if needed --}}
   {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
 
+  <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}" />
   @vite('resources/css/app.css')
   <link rel="stylesheet" href="{{ asset('css/hamburger.css') }}">
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
@@ -16,9 +17,9 @@
 
 <body>
   <x-navbar></x-navbar>
-  {{-- <main class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8"> --}}
-  {{ $slot }}
-  {{-- </main> --}}
+  <main class="font-monsterrat">
+    {{ $slot }}
+  </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   <script src="{{ asset('js/script.js') }}"></script>
