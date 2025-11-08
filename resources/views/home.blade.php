@@ -33,10 +33,10 @@
 
   </section> --}}
 
-  <section id="hero" class="relative w-full min-h-[70vh] lg:min-h-screen overflow-hidden bg-black flex items-center">
+  <section id="hero" class="relative w-full min-h-[80vh] lg:min-h-screen overflow-hidden bg-black flex items-center">
     <!-- Gambar background -->
     <img src="{{ asset('img/hero.webp') }}" alt="Hero Image"
-      class="absolute inset-0 w-full h-full object-cover object-[70%_100%] md:object-center md:mask-l-from-20%" />
+      class="absolute inset-0 w-full h-full object-cover object-[70%_100%] md:object-center md:mask-l-from-20% mask-b-from-90%" />
 
     <!-- Overlay gelap biar teks terbaca -->
     <div class="absolute inset-0 bg-black/30 md:hidden"></div>
@@ -77,54 +77,38 @@
   </section>
 
 
-  <section id="profil" class="">
-    <div>
-      <h2>Profil Perusahaan</h2>
-      <div class="flex">
-        <div>
-          <p class="mb-5">Berbekal keahlian dan pengalaman dalam menangani proyek-proyek prestisius berskala menengah
-            dan
-            besar. <strong>PT Gajahmada Karya Mandiri (GKM)</strong> berpengalaman dalam perancanaan dan pembangunan
-            pabrik,
-            apartemen, gedung
-            komersial, hotel, rumah sakit, infrastruktur (jembatan, pembukaan kawasan industri, jalan tol, jalan raya,
-            flyover) serta pekerjaan pemancangan tiang pancang yang tersebar di berbagai daerah di Indonesia.
-          </p>
-          <p class="mb-5">
-            PT Gajahmada Karya Mandiri (GKM) selalu berupaya memberikan hasil yang sesuai dengan kontrak yang
-            disepakati.
-            Dengan pengalaman dan keterampilan yang teruji, kami bangga untuk memberikan solusi dan layanan terbaik
-            untuk
-            menggapai tujuan proyek anda.
-            Kualitas sumber daya manusia dan profesionalitas menjadi kunci kehandalan layanan kami. Kami mengandalkan
-            tenaga
-            profesional yang mahir dibidangnya untuk senantiasa memberikan solusi terbaik dalam kebutuhan konstruksi.
-          </p>
-        </div>
-        <div>
+  <section id="profil" class="bg-black">
+    <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Profil Perusahaan</h1>
+      <div class="text-base md:text-lg lg:text-xl my-4">
+        <p class="mb-5">
+          Berbekal keahlian dan pengalaman dalam menangani proyek-proyek konstruksi berskala menengah hingga besar,
+          <strong>PT Gajahmada Karya Mandiri</strong> telah berperan dalam perencanaan dan pembangunan pabrik,
+          apartemen,
+          gedung komersial,
+          hotel, rumah sakit, pemancangan tiang pancang, serta beragam infrastruktur seperti jembatan, kawasan industri,
+          jalan tol, jalan raya,
+          dan flyover di berbagai wilayah Indonesia.
+        </p>
 
-          <p class="mb-5">
-            PT Gajahmada Karya Mandiri (GKM) bergerak di jasa kontraktor umum dengan pelayanan yang lengkap dan
-            menyeluruh
-            meliputi : perencanaan, desain, hingga pembangunan (plan, design and build).
-          </p>
-          <p class="mb-5">
+        <p class="mb-5">
+          Kami berkomitmen memberikan hasil sesuai kontrak dengan kualitas terbaik.
+          Didukung oleh sumber daya manusia profesional dan berpengalaman, kami selalu menghadirkan solusi konstruksi
+          yang
+          efektif, efisien, dan tepat waktu.
+        </p>
 
-            Dalam penanganan proyek-proyeknya, kami juga menawarkan kemungkinan pelaksanaan pekerjaan melalui kerjasama
-            operasi (joint operation).
-            Melaksanakan jasa konstruksi secara joint operation. Dalam skema ini kami membuka kemungkinan untuk bekerja
-            sama
-            dengan perusahaan konstruksi lain, baik lokal ataupun asing untuk mengerjakan proyek secara bersama-sama.
-            Memberikan jasa konstruksi secara menyeluruh yang meliputi perencanaan awal, desain, detail penanganan
-            hingga
-            konstruksi dengan jaminan harga dan waktu penyelesaian yang efektif dan efisien.
-          </p>
-        </div>
-
+        <p class="mb-5">
+          Sebagai kontraktor umum, kami menyediakan layanan menyeluruh mulai dari perencanaan, desain, hingga
+          pembangunan
+          (plan, design, and build),
+          termasuk pelaksanaan proyek melalui kerja sama operasi (joint operation) dengan mitra lokal maupun
+          internasional.
+        </p>
       </div>
     </div>
   </section>
-  <section id="visimisi" class="">
+  <section id="visimisi" class="bg-black">
     <h2>Visi</h2>
     <p>Menjadi Perusahaan Jasa Konstruksi yang terkemuka dan terpecaya dengan menyediakan produk-produk berkualitas
       dan
