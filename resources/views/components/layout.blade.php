@@ -11,6 +11,10 @@
   <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}" />
   @vite('resources/css/app.css')
   <link rel="stylesheet" href="{{ asset('css/hamburger.css') }}">
+
+  {{-- gsap --}}
+  <link rel="stylesheet" href="{{ asset('css/style-gsap.css') }}">
+
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
   <title>{{ $title }}</title>
 </head>
@@ -21,7 +25,11 @@
     {{ $slot }}
   </main>
 
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+  {{-- gsap --}}
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="{{ asset('js/script-gsap.js') }}"></script>
+
   <script src="{{ asset('js/script.js') }}"></script>
 </body>
 
