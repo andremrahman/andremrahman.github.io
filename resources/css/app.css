@@ -11,12 +11,12 @@
 }
 
 @font-face {
-    font-family: "Lato";
-    src: url("../../public/fonts/Lato-Regular.woff2") format("woff2");
+    font-family: "Raleway";
+    src: url("../../public/fonts/Raleway-Regular.woff2") format("woff2");
 }
 
 @font-face {
-    font-family: "Monsterrat";
+    font-family: "Montserrat";
     src: url("../../public/fonts/Montserrat-Regular.woff2") format("woff2");
 }
 
@@ -27,10 +27,10 @@
     --font-poppins: "Poppins", "Instrument Sans", ui-sans-serif, system-ui,
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --font-lato: "Lato", "Instrument Sans", ui-sans-serif, system-ui, sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    --font-raleway: "Raleway", "Instrument Sans", ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --font-monsterrat: "Monsterrat", "Instrument Sans", ui-sans-serif, system-ui,
+    --font-montserrat: "Montserrat", "Instrument Sans", ui-sans-serif, system-ui,
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 }

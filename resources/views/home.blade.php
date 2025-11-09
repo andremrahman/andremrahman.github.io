@@ -4,7 +4,7 @@
     <div class="max-w-6xl w-full">
       <div class="text-xl">
         <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">PT Gajahmada Karya Mandiri</h2>
-        <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-6 font-monsterrat">
+        <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-6 font-montserrat">
           Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik
           dengan mengutamakan ketepatan waktu, mutu, dan kepuasan klien.
         </p>
@@ -77,7 +77,7 @@
   </section>
 
 
-  <section id="profil" class="bg-black">
+  <section id="profil" class="bg-black shadow-[0_-1px_0_#000] text-white">
     <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
       <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Profil Perusahaan</h1>
       <div class="text-base md:text-lg lg:text-xl my-4">
@@ -108,7 +108,7 @@
       </div>
     </div>
   </section>
-  <section id="visimisi" class="bg-black">
+  <section id="visimisi" class="bg-black shadow-[0_-1px_0_#000] text-white">
     <h2>Visi</h2>
     <p>Menjadi Perusahaan Jasa Konstruksi yang terkemuka dan terpecaya dengan menyediakan produk-produk berkualitas
       dan

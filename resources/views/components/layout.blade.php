@@ -17,7 +17,7 @@
 
 <body>
   <x-navbar></x-navbar>
-  <main class="font-monsterrat">
+  <main class="font-montserrat">
     {{ $slot }}
   </main>
 
