@@ -1,33 +1,13 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
 
+  <section class="bg-purple-500 h-screen"></section>
 
-  <div class="scroller">
-
-    <section class="orange">
-      <div class="text">This is some text inside of a div block.</div>
-    </section>
-
-    <section class="black">
-
-      <div class="text-wrap">
-        <div class="panel-text blue-text">Blue</div>
-        <div class="panel-text red-text">Red</div>
-        <div class="panel-text orange-text">Orange</div>
-        <div class="panel-text purple-text">Purple</div>
-      </div>
-
-      <div class="p-wrap">
-        <div class="panel blue"></div>
-        <div class="panel red"></div>
-        <div class="panel orange"></div>
-        <div class="panel purple"></div>
-      </div>
-
-    </section>
-
-    <section class="blue"></section>
-
+  <div id="timeline">
+    <div id="red">HELLO</div>
+    <div id="blue">BLUE</div>
+    <div id="aqua">AQUA</div>
+    <div id="green">GREEN</div>
   </div>
 
 </x-layout>
