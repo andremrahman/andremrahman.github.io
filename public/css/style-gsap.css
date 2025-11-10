@@ -1,215 +1,140 @@
-@font-face {
-    font-family: "Bandeins Sans & Strange Variable";
-    src: url("https://res.cloudinary.com/dldmpwpcp/raw/upload/v1566406079/BandeinsStrangeVariable_esetvq.ttf");
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
-
-* {
-    box-sizing: border-box;
-    user-select: none;
-}
-
-::-webkit-scrollbar {
-    display: none;
-}
-
-figure {
+body,
+html {
     margin: 0;
-    overflow: hidden;
 }
-
-html,
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
+.scroller {
     height: 100vh;
-    height: -webkit-fill-available;
 }
 
-body {
-    color: #fff;
-    background: #4361ee;
-    font-family: "Sora", sans-serif;
-}
-
-footer {
-    position: fixed;
-    z-index: 999;
-    bottom: 0;
+.orange {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    width: 100%;
-    height: 7em;
-    font-family: "Sora", sans-serif;
-    font-size: clamp(1.2rem, 2vw, 1rem);
-}
-
-a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.slide {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    visibility: hidden;
-}
-
-.slide__outer,
-.slide__inner {
-    width: 100%;
-    height: 100%;
-    overflow-y: hidden;
-}
-
-.slide__content {
-    display: flex;
-    align-items: center;
+    height: 100vh;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
     justify-content: center;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #753500;
 }
 
-.slide__container {
-    position: relative;
-    max-width: 1400px;
-    width: 100vw;
-    margin: 0 auto;
-    height: 90vh;
-    margin-bottom: 10vh;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    padding: 0 1rem;
+.text {
+    color: #fff;
 }
 
-.slide__heading {
-    --width: 200;
-    display: block;
-    text-align: left;
-    font-family: "Bandeins Sans & Strange Variable";
-    font-size: clamp(5rem, 15vw, 15rem);
-    font-weight: 900;
-    font-variation-settings: "wdth" var(--width);
-    margin: 0;
-    padding: 0;
-    color: #f2f1fc;
-    z-index: 999;
-    mix-blend-mode: difference;
-    grid-area: 2 / 2 / 3 / 10;
-    align-self: end;
+.black {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #070707;
 }
 
-.slide__img-cont {
-    margin-top: 4rem;
-    grid-area: 2 / 1 / 7 / 8;
+.blue {
+    height: 100vh;
+    background-color: #00026d;
 }
 
-.slide__img-cont img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.slide:nth-of-type(1) {
-    visibility: visible;
-}
-
-.slide:nth-of-type(1) .slide__content {
-    background-color: #6d597a;
-}
-
-.slide:nth-of-type(2) .slide__content {
-    background-color: #355070;
-}
-
-.slide:nth-of-type(3) .slide__content {
-    background-color: #b56576;
-}
-
-.slide:nth-of-type(4) .slide__content {
-    background-color: #9a8c98;
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
-
-.overlay__content {
-    max-width: 1400px;
-    width: 100vw;
-    margin: 0 auto;
-    padding: 0 1rem;
-    height: 90vh;
-    margin-bottom: 10vh;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(10, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
-
-.overlay__img-cont {
+.text-wrap {
     position: relative;
     overflow: hidden;
-    margin: 0;
-    grid-area: 4 / 3 / 9 / 11;
+    width: 450px;
+    height: 80vh;
 }
 
-.overlay__img-cont img {
+.panel-text {
     position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 1;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    background-color: #070707;
+
+    transform: translateY(100%);
+    opacity: 0;
 }
 
-.overlay__count {
-    grid-area: 3 / 10 / 4 / 10;
-    font-size: clamp(3rem, 4vw, 15rem);
-    margin: 0;
-    padding: 0;
-    text-align: right;
-    border-bottom: 7px white solid;
+.panel-text.blue-text {
+    color: blue;
 }
 
-@media screen and (min-width: 900px) {
-    .overlay__content,
-    .slide__container {
-        padding: 0 3rem;
-        margin-top: 10vh;
-        height: 80vh;
-    }
+.panel-text.red-text {
+    color: red;
+}
 
-    .overlay__img-cont {
-        grid-area: 5 / 4 / 10 / 11;
-    }
+.panel-text.purple-text {
+    color: purple;
+}
 
-    .overlay__count {
-        grid-area: 3 / 10 / 4 / 11;
-    }
+.panel-text.orange-text {
+    color: orange;
+}
 
-    .slide__img-cont {
-        margin-top: 0;
-        grid-area: 3 / 2 / 8 / 7;
-    }
+.p-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 450px;
+    height: 80vh;
+}
 
-    .slide__heading {
-        grid-area: 1 / 1 / 4 / 10;
-    }
+.panel {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/5ed12171d9d512cb2feead83_5.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.panel._2 {
+    z-index: 1;
+    background-image: url("../images/5f5a5b3515c4dd0c2c455925_110642301_938622823267359_7859124022958180678_n201.jpg");
+}
+
+.panel.blue {
+    z-index: auto;
+}
+
+.panel.red {
+    z-index: auto;
+    background-color: red;
+    background-image: none;
+}
+
+.panel.orange {
+    z-index: auto;
+    background-color: #cf5d00;
+    background-image: none;
+}
+
+.panel.purple {
+    z-index: auto;
+    background-color: #808;
+    background-image: none;
 }
