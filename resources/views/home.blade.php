@@ -52,7 +52,7 @@
           Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik dengan mengutamakan ketepatan waktu,
           mutu, dan kepuasan klien.
         </p>
-        <a href="/layanan"
+        <a href="/services"
           class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group mt-5">
           <span
             class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>

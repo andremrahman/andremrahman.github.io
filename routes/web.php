@@ -6,10 +6,10 @@ Route::get('/', function () {
     return view('home', ['title' => 'Gajahmada Karya Mandiri']);
 });
 
-Route::get('/layanan', function () {
-    return view('layanan', ['title' => "Layanan Kami | Gajahmada Karya Mandiri"]);
+Route::get('/services', function () {
+    return view('services', ['title' => "Services | Gajahmada Karya Mandiri"]);
 });
 
-Route::get('/kontak', function () {
-    return view('kontak', ['title' => "Kontak Kami | Gajahmada Karya Mandiri"]);
+Route::get('/contact', function () {
+    return view('contact', ['title' => "Contact Us | Gajahmada Karya Mandiri"]);
 });

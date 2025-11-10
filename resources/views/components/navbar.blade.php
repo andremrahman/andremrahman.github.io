@@ -1,4 +1,4 @@
-<nav class="fixed top-0 left-0 w-full z-50 bg-black backdrop-blur text-poppins">
+<nav class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur text-poppins">
   <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
     <div class="relative flex h-16 items-center justify-between">
       <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -31,8 +31,8 @@
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
             <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-            <x-nav-link href="/layanan" :active="request()->is('layanan')">Layanan Kami</x-nav-link>
-            <x-nav-link href="/kontak" :active="request()->is('kontak')">Kontak Kami</x-nav-link>
+            <x-nav-link href="/services" :active="request()->is('services')">Services</x-nav-link>
+            <x-nav-link href="/contact" :active="request()->is('contact')">Contact Us</x-nav-link>
           </div>
         </div>
       </div>
@@ -42,8 +42,8 @@
   <div id="mobile-menu" class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out sm:hidden">
     <div class="space-y-1 px-2 pt-2 pb-3">
       <x-mobile-nav-link href="/" :active="request()->is('/')">Home</x-mobile-nav-link>
-      <x-mobile-nav-link href="/layanan" :active="request()->is('layanan')">Layanan Kami</x-mobile-nav-link>
-      <x-mobile-nav-link href="/kontak" :active="request()->is('kontak')">Kontak Kami</x-mobile-nav-link>
+      <x-mobile-nav-link href="/services" :active="request()->is('services')">Services</x-mobile-nav-link>
+      <x-mobile-nav-link href="/contact" :active="request()->is('contact')">Contact Us</x-mobile-nav-link>
     </div>
   </div>
 
