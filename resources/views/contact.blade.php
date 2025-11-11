@@ -1,9 +1,9 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
 
-  <section class="bg-purple-500 h-screen"></section>
+  <section class="bg-[#1e293b] h-screen"></section>
 
-  <div id="timeline">
+  <div id="timeline" class="">
     <div id="red" class="z-4 bg-red-500">HELLO</div>
     <div id="blue" class="z-3 bg-blue-500">BLUE</div>
     <div id="aqua" class="z-2 bg-[aqua]">AQUA</div>
@@ -26,7 +26,10 @@
 
     </div>
   </div>
-  <div class="spacer">
+  <div class="spacer bg-zinc-700 text-3xl flex justify-center items-center h-screen">
+    <h1>The End</h1>
+  </div>
+  <div class="bg-zinc-200 text-3xl flex justify-center items-center h-screen">
     <h1>The End</h1>
   </div>
 

@@ -12,14 +12,3 @@
     justify-content: center;
     color: white;
 }
-
-.spacer {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 30px;
-    background: #222;
-}
