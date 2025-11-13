@@ -3,11 +3,13 @@
 
   <section class="bg-[#1e293b] h-screen"></section>
 
-  <div id="timeline" class="">
-    <div id="red" class="z-4 bg-red-500">HELLO</div>
-    <div id="blue" class="z-3 bg-blue-500">BLUE</div>
-    <div id="aqua" class="z-2 bg-[aqua]">AQUA</div>
-    <div id="green" class="z-1 bg-green-500">GREEN</div>
+  <div id="timeline-container">
+    <div id="timeline" class="">
+      <div id="red" class="z-4 bg-red-500">HELLO</div>
+      <div id="blue" class="z-3 bg-blue-500">BLUE</div>
+      <div id="aqua" class="z-2 bg-[aqua]">AQUA</div>
+      <div id="green" class="z-1 bg-green-500">GREEN</div>
+    </div>
   </div>
 
   <div class="spacer">

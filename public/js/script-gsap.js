@@ -3,9 +3,9 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const tl = gsap.timeline({
     scrollTrigger: {
-        trigger: "#timeline",
+        trigger: "#timeline-container",
         start: "top top",
-        end: "+=400%",
+        end: "bottom top",
         scrub: 1,
         pin: true,
     },
