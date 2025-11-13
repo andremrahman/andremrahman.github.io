@@ -5,7 +5,8 @@ const tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#timeline-container",
         start: "top top",
-        end: "bottom top",
+        // end: "bottom top",
+        end: "+=600%",
         scrub: 1,
         pin: true,
     },
