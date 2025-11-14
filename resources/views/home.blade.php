@@ -42,36 +42,41 @@
     <div class="absolute inset-0 bg-black/30 md:hidden"></div>
 
     <!-- Konten teks -->
-    <div class="mx-auto px-4 max-w-7xl mt-16 py-8 md:py-16 sm:px-6 lg:px-8">
-      <div class="md:w-1/2 relative z-10 flex flex-col justify-center items-start text-start h-full text-white">
-        <h1 class="text-base md:text-lg lg:text-xl [text-shadow:1px_2px_2px_rgba(0,0,0,1)]">Selamat
-          datang di</h1>
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold [text-shadow:2px_4px_4px_rgba(0,0,0,0.8)] leading-tight">
-          PT Gajahmada Karya Mandiri</h1>
-        <p class="text-base md:text-lg lg:text-xl my-4 [text-shadow:1px_2px_2px_rgba(0,0,0,1)]">
-          Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik dengan mengutamakan ketepatan waktu,
-          mutu, dan kepuasan klien.
-        </p>
-        <a href="/services"
-          class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group mt-5">
-          <span
-            class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>
-          <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-            <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </span>
-          <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </span>
-          <span
-            class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">Lihat
-            Layanan Kami</span>
-        </a>
+    <div class="w-full">
+      <div class="mx-auto px-4 max-w-7xl mt-16 py-8 md:py-16 sm:px-6 lg:px-8">
+        <div class="md:w-1/2 relative z-10 flex flex-col justify-center items-start text-start h-full text-white">
+          <h1 class="text-base md:text-lg lg:text-xl [text-shadow:1px_2px_2px_rgba(0,0,0,1)]">Welcome to</h1>
+          <h1
+            class="text-3xl md:text-5xl lg:text-6xl font-bold [text-shadow:2px_4px_4px_rgba(0,0,0,0.8)] leading-tight">
+            PT Gajahmada Karya Mandiri</h1>
+          <p class="text-base md:text-lg lg:text-xl my-4 [text-shadow:1px_2px_2px_rgba(0,0,0,1)]">
+            {{-- Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik dengan mengutamakan ketepatan waktu,
+            mutu, dan kepuasan klien. --}}
+            asdsaf
+          </p>
+          <a href="/services"
+            class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group mt-5">
+            <span
+              class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>
+            <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </span>
+            <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+              <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </span>
+            <span
+              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">Lihat
+              Layanan Kami</span>
+          </a>
+        </div>
       </div>
     </div>
   </section>
