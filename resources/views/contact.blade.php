@@ -5,10 +5,10 @@
 
   <div id="timeline-container">
     <div id="timeline" class="">
-      <div id="red" class="z-4 bg-red-500">HELLO</div>
-      <div id="blue" class="z-3 bg-blue-500">BLUE</div>
-      <div id="aqua" class="z-2 bg-[aqua]">AQUA</div>
-      <div id="green" class="z-1 bg-green-500">GREEN</div>
+      <section id="slide1" class="z-4 bg-red-500">HELLO</section>
+      <section id="slide2" class="z-3 bg-blue-500">BLUE</section>
+      <section id="slide3" class="z-2 bg-[aqua]">AQUA</section>
+      <section id="slide4" class="z-1 bg-green-500">GREEN</section>
     </div>
   </div>
 

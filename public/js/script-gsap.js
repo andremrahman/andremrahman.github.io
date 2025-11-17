@@ -1,7 +1,7 @@
 // ? SECTION TIMELINE
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const tl = gsap.timeline({
+const tlTimeLine = gsap.timeline({
     scrollTrigger: {
         trigger: "#timeline-container",
         start: "top top",
@@ -13,17 +13,18 @@ const tl = gsap.timeline({
 });
 
 // add a label indicating the spot in the timeline where the red, blue, aqua and green are fully visible.
-tl.to("#red", { yPercent: -100, duration: 1 }, "red")
-    .to("#blue", { yPercent: -100, duration: 1 }, "blue")
-    .to("#aqua", { yPercent: -100, duration: 1 }, "aqua")
-    .add("green");
+tlTimeLine
+    .to("#slide1", { yPercent: -100, duration: 1 }, "slide1")
+    .to("#slide2", { yPercent: -100, duration: 1 }, "slide2")
+    .to("#slide3", { yPercent: -100, duration: 1 }, "slide3")
+    .add("slide4");
 
 //? TEXT SCROLL ROLL
 // console.clear();
 
 const scrollingText = gsap.utils.toArray(".rail .rail-text");
 
-const tl1 = horizontalLoop(scrollingText, {
+const tlRailText = horizontalLoop(scrollingText, {
     repeat: -1,
 });
 const progressWrap = gsap.utils.wrap(0, 1);
@@ -33,7 +34,7 @@ let speedTween, lastDirection, loopTween;
 const timer = gsap
     .delayedCall(0.2, () => {
         loopTween && loopTween.kill();
-        loopTween = gsap.to(tl1, {
+        loopTween = gsap.to(tlRailText, {
             timeScale: lastDirection,
             duration: 0.25,
             ease: "none",
@@ -46,12 +47,13 @@ ScrollTrigger.create({
     start: "top bottom",
     end: "bottom top",
     onUpdate: (self) => {
-        tl1.timeScale(0);
+        tlRailText.timeScale(0);
         lastDirection = self.direction;
-        tl1.progress(tl1.progress() + lastDirection * 0.01);
+        // tlRailText.progress(tlRailText.progress() + lastDirection * 0.01);
+        tlRailText.progress(tlRailText.progress() + lastDirection * 0.004);
         timer.restart(true);
     },
-    markers: true,
+    // markers: true,
 });
 
 /*

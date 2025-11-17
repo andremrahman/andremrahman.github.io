@@ -32,7 +32,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/smooth-scrollbar@8.7.1/dist/smooth-scrollbar.js"></script>
 
-
   <script src="{{ asset('js/script-gsap.js') }}"></script>
 
   <script src="{{ asset('js/script.js') }}"></script>

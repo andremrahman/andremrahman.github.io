@@ -3,12 +3,9 @@
     height: 100vh;
     overflow: hidden;
 }
-#timeline > div {
+#timeline > section {
     position: absolute;
     inset: 0;
-    font-size: 4rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
 }
