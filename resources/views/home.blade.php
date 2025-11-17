@@ -48,12 +48,13 @@
           <h1 class="text-base md:text-lg lg:text-xl [text-shadow:1px_2px_2px_black]">Welcome to</h1>
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold [text-shadow:2px_4px_4px_black] leading-tight">
             PT Gajahmada Karya Mandiri</h1>
-          <p class="italic text-xs md:text-sm lg:text-base my-4 [text-shadow:1px_2px_2px_black]">We Build More Than
+          <p class="italic text-xs md:text-sm lg:text-base my-2 [text-shadow:1px_2px_2px_black]">We Build More Than
             Structures — We Build Trust</p>
           <p class="text-base md:text-lg lg:text-xl my-4 [text-shadow:1px_2px_2px_black]">
-            Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik dengan mengutamakan ketepatan waktu,
-            mutu, dan kepuasan klien.
+            From concept to completion, we build with precision, dedication, and care to bring your vision to life.
           </p>
+
+          {{-- button --}}
           <a href="/services"
             class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group mt-5">
             <span
@@ -73,18 +74,18 @@
               </svg>
             </span>
             <span
-              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">Lihat
-              Layanan Kami</span>
+              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">Discover
+              Our Services</span>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-
+  {{-- rail text --}}
   <div
-    class="scrolling-text overflow-hidden min-h-1/5 w-full bg-black text-black text-shadow-lg text-shadow-white flex items-center shadow-[0_-1px_0_#000] pb-[5vh]">
-    <div class="rail flex text-[10vh] md:text-[15vh] font-bold">
+    class="scrolling-text overflow-hidden min-h-1/5 w-full bg-black text-black text-shadow-lg text-shadow-white flex items-center py-[5vh] shadow-[0_-1px_0_#000]">
+    <div class="rail flex text-[5vh] md:text-[10vh] font-bold">
       <p class="rail-text whitespace-nowrap px-2 py-4">
         construct design foundation</p>
       <p class="rail-text whitespace-nowrap px-2 py-4">
@@ -93,56 +94,19 @@
         plan site structure layout</p>
       <p class="rail-text whitespace-nowrap px-2 py-4">
         project develop architecture</p>
-
     </div>
-  </div>
-
-  <div class="bg-zinc-200 text-3xl flex justify-center items-center h-screen">
-    <h1>The End</h1>
   </div>
 
 
   <div id="timeline-container">
     <div id="timeline" class="min-h-screen">
-      <section id="slide1" class="z-4 bg-black shadow-[0_-1px_0_#000] text-white h-full flex items-center">asd sa
-        {{-- <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
-          <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Profil Perusahaan</h1>
-          <div class="text-base md:text-lg lg:text-xl my-4">
-            <p class="mb-5">
-              Berbekal keahlian dan pengalaman dalam menangani proyek-proyek konstruksi berskala menengah hingga besar,
-              <strong>PT Gajahmada Karya Mandiri</strong> telah berperan dalam perencanaan dan pembangunan pabrik,
-              apartemen,
-              gedung komersial,
-              hotel, rumah sakit, pemancangan tiang pancang, serta beragam infrastruktur seperti jembatan, kawasan
-              industri,
-              jalan tol, jalan raya,
-              dan flyover di berbagai wilayah Indonesia.
-            </p>
-
-            <p class="mb-5">
-              Kami berkomitmen memberikan hasil sesuai kontrak dengan kualitas terbaik.
-              Didukung oleh sumber daya manusia profesional dan berpengalaman, kami selalu menghadirkan solusi
-              konstruksi
-              yang
-              efektif, efisien, dan tepat waktu.
-            </p>
-
-            <p class="mb-5">
-              Sebagai kontraktor umum, kami menyediakan layanan menyeluruh mulai dari perencanaan, desain, hingga
-              pembangunan
-              (plan, design, and build),
-              termasuk pelaksanaan proyek melalui kerja sama operasi (joint operation) dengan mitra lokal maupun
-              internasional.
-            </p>
-          </div>
-        </div> --}}
+      <section id="slide1" class="z-3 bg-zinc-800 rounded-t-2xl">BLUE
 
       </section>
 
 
-      <section id="slide2" class="z-3 bg-red-500">BLUE</section>
-      <section id="slide3" class="z-2 bg-[aqua]">AQUA</section>
-      <section id="slide4" class="z-1 bg-green-500">GREEN</section>
+      <section id="slide2" class="z-2 bg-[aqua] rounded-t-2xl">AQUA</section>
+      <section id="slide3" class="z-1 bg-green-500 rounded-t-2xl">GREEN</section>
     </div>
   </div>
 

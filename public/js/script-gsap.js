@@ -15,7 +15,7 @@ const tlTimeLine = gsap.timeline({
     },
 });
 
-// merah → biru
+// transisi
 tlTimeLine
     .to("#slide1", { yPercent: 0, scale: 1, duration: 0.66 }, "s1")
 
