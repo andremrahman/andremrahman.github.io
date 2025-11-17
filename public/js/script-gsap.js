@@ -19,7 +19,7 @@ tl.to("#red", { yPercent: -100, duration: 1 }, "red")
     .add("green");
 
 //? TEXT SCROLL ROLL
-console.clear();
+// console.clear();
 
 const scrollingText = gsap.utils.toArray(".rail .rail-text");
 
