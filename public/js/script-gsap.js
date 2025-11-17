@@ -1,23 +1,31 @@
 // ? SECTION TIMELINE
-gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger);
+
+// scale awal
+gsap.set("#slide1", { scale: 0.8, yPercent: 0 });
+gsap.set("#slide2, #slide3", { scale: 0.7, yPercent: 100 });
 
 const tlTimeLine = gsap.timeline({
     scrollTrigger: {
         trigger: "#timeline-container",
         start: "top top",
-        // end: "bottom top",
-        end: "+=600%",
+        end: "+=400%",
         scrub: 1,
         pin: true,
     },
 });
 
-// add a label indicating the spot in the timeline where the red, blue, aqua and green are fully visible.
+// merah → biru
 tlTimeLine
-    .to("#slide1", { yPercent: -100, duration: 1 }, "slide1")
-    .to("#slide2", { yPercent: -100, duration: 1 }, "slide2")
-    .to("#slide3", { yPercent: -100, duration: 1 }, "slide3")
-    .add("slide4");
+    .to("#slide1", { yPercent: 0, scale: 1, duration: 0.66 }, "s1")
+
+    // biru → aqua
+    .to("#slide1", { yPercent: -100, duration: 1 }, "s2")
+    .to("#slide2", { yPercent: 0, scale: 1, duration: 1 }, "s2")
+
+    // aqua → hijau
+    .to("#slide2", { yPercent: -100, duration: 1 }, "s3")
+    .to("#slide3", { yPercent: 0, scale: 1, duration: 1 }, "s3");
 
 //? TEXT SCROLL ROLL
 // console.clear();

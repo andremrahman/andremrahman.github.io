@@ -102,10 +102,10 @@
   </div>
 
 
-  {{-- <div id="timeline-container">
+  <div id="timeline-container">
     <div id="timeline" class="min-h-screen">
-      <section id="slide1" class="z-4 bg-black shadow-[0_-1px_0_#000] text-white h-full">
-        <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
+      <section id="slide1" class="z-4 bg-black shadow-[0_-1px_0_#000] text-white h-full flex items-center">asd sa
+        {{-- <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Profil Perusahaan</h1>
           <div class="text-base md:text-lg lg:text-xl my-4">
             <p class="mb-5">
@@ -135,7 +135,7 @@
               internasional.
             </p>
           </div>
-        </div>
+        </div> --}}
 
       </section>
 
@@ -144,7 +144,7 @@
       <section id="slide3" class="z-2 bg-[aqua]">AQUA</section>
       <section id="slide4" class="z-1 bg-green-500">GREEN</section>
     </div>
-  </div> --}}
+  </div>
 
 
   {{-- <section id="profil" class="bg-black shadow-[0_-1px_0_#000] text-white">

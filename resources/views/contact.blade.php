@@ -4,11 +4,10 @@
   <section class="bg-[#1e293b] h-screen"></section>
 
   <div id="timeline-container">
-    <div id="timeline" class="">
-      <section id="slide1" class="z-4 bg-red-500">HELLO</section>
-      <section id="slide2" class="z-3 bg-blue-500">BLUE</section>
-      <section id="slide3" class="z-2 bg-[aqua]">AQUA</section>
-      <section id="slide4" class="z-1 bg-green-500">GREEN</section>
+    <div id="timeline" class="min-h-screen">
+      <section id="slide1" class="z-3 bg-blue-500 rounded-t-2xl">BLUE</section>
+      <section id="slide2" class="z-2 bg-[aqua] rounded-t-2xl">AQUA</section>
+      <section id="slide3" class="z-1 bg-green-500 rounded-t-2xl">GREEN</section>
     </div>
   </div>
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -21,7 +21,7 @@
 
 <body>
   <x-navbar></x-navbar>
-  <main class="font-montserrat">
+  <main class="font-montserrat text-white bg-black">
     {{ $slot }}
   </main>
 
