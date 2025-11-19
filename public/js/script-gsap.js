@@ -1,62 +1,59 @@
 gsap.registerPlugin(ScrollTrigger);
 
+let sec = document.querySelector(".section");
+let line = sec.querySelector(".reveal-line");
+let cover = sec.querySelector(".cover");
+let content = sec.querySelector(".content");
+
+// TIMELINE PANJANG (biar animasi lebih cepat dari scroll)
 let tl = gsap.timeline({
     scrollTrigger: {
-        trigger: "#section",
-        start: "top center",
-        end: "bottom center",
-        scrub: true,
+        trigger: sec,
+        start: "top 80%", // masuk 20% layar
+        end: "top 20%", // sampai agak atas
+        scrub: 1.2, // <-- ini bikin animasi TELAT DIKIT sehingga terlihat LEBIH CEPAT
+        // markers: true
     },
 });
 
-// PHASE 1 — garis isi dulu
-tl.to(".top-line", { width: "100%", ease: "none" }, 0);
-tl.to(".bottom-line", { width: "100%", ease: "none" }, 0);
+// 1) titik -> melebar hampir penuh
+tl.to(line, {
+    width: "100%",
+    duration: 0.3,
+    ease: "power2.out",
+});
 
-// PHASE 2 — garis & panel nutup BERSAMAAN
+// 2) garis turun membuka layar
 tl.to(
-    ".top-line",
+    line,
     {
-        top: "50%", // garis turun
-        ease: "power2.out",
+        top: "100%",
+        duration: 0.8,
+        ease: "power2.inOut",
     },
-    1
+    "-=0.1"
 );
 
+// 3) cover ke-angkat ditarik garis
 tl.to(
-    ".bottom-line",
+    cover,
     {
-        bottom: "50%", // garis naik
-        ease: "power2.out",
+        height: 0,
+        duration: 0.8,
+        ease: "power2.inOut",
     },
-    1
+    "-=0.75"
 );
 
-tl.to(
-    ".top-panel",
-    {
-        top: "0%", // panel turun bareng
-        ease: "power2.out",
-    },
-    1
-);
+// 4) garis hilang pelan
+tl.to(line, {
+    opacity: 0,
+    duration: 0.3,
+});
 
-tl.to(
-    ".bottom-panel",
-    {
-        bottom: "0%", // panel naik bareng
-        ease: "power2.out",
-    },
-    1
-);
-
-// PHASE 3 — setelah nutup → garis shrink ke tengah
-tl.to(
-    ".top-line, .bottom-line",
-    {
-        scaleX: 0,
-        transformOrigin: "center center",
-        ease: "power1.in",
-    },
-    1.5
-);
+// 5) konten muncul
+tl.to(content, {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power1.out",
+});
