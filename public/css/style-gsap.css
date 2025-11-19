@@ -1,39 +1,62 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    height: 100vh;
-    width: 100%;
-    padding: 0;
     margin: 0;
-    overflow: hidden;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
+    padding: 0;
+    background: #000;
+    min-height: 200vh; /* biar bisa scroll */
     display: flex;
-    align-content: center;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/314556/nightSky.jpg")
-        center center repeat;
 }
 
-#demo {
-    overflow: visible;
-    opacity: 0;
-    visibility: hidden;
-    max-height: 90%;
+/* Container utama */
+#section {
+    position: relative;
+    width: 600px;
+    min-height: 50vh;
+    background: #111;
+    overflow: hidden;
+    border: 1px solid #333;
 }
 
-#masterControl {
+.top-line {
+    z-index: 2;
     position: absolute;
-    bottom: 20px;
-    right: 20px;
-    padding: 12px;
-    cursor: pointer;
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+}
+
+.bottom-line {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+}
+
+.top-line,
+.bottom-line {
+    transform-origin: center center; /* penting! */
+}
+
+/* Panel nutup */
+.panel {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #000;
+    z-index: 1;
+}
+
+.top-panel {
+    top: -50%;
+}
+
+.bottom-panel {
+    bottom: -50%;
 }

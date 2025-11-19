@@ -1,60 +1,62 @@
-gsap.defaults({ ease: "power3.inOut" });
+gsap.registerPlugin(ScrollTrigger);
 
-var master = gsap.timeline({ delay: 0.5, repeat: -1, repeatDelay: 0.5 });
-// var mt = 0.85;
-var but = document.querySelector("#masterControl");
-var es = "power2.out";
-
-gsap.set("#demo", { autoAlpha: 1 });
-gsap.set(".bottomFighter", {
-    rotation: 180,
-    y: 758,
-    transformOrigin: "center center",
+let tl = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#section",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+    },
 });
-// gsap.set("#stage, #luke, #darth, #chewie, #r2d2", { autoAlpha: 0 });
 
-function flyBy() {
-    var tl = gsap.timeline({ defaults: { duration: 2 } });
-    tl.add("fighter");
-    tl.from(
-        ".bottomFighter, .topFighter",
-        { duration: 0.1, autoAlpha: 0 },
-        "fighter"
-    );
-    tl.fromTo(
-        ".topFighter",
-        { x: -1000 },
-        { x: 2500, ease: "none" },
-        "fighter"
-    );
-    tl.fromTo(
-        ".bottomFighter",
-        { x: 2500 },
-        { x: -1000, ease: "none" },
-        "fighter"
-    );
-    tl.to(".topLine", { attr: { x2: 2500 }, ease: "none" }, "fighter");
-    tl.to(".bottomLine", { attr: { x1: -1000 }, ease: "none" }, "fighter");
-    tl.to(
-        ".bottomFighter, .topFighter",
-        { duration: 0.1, autoAlpha: 0 },
-        "-=0.1"
-    );
-    tl.to(".topCut", { y: 418, ease: es }, "vanish");
-    tl.to(".bottomCut", { y: -341, ease: es }, "vanish");
-    tl.to(".smallLine", { duration: 1, attr: { x1: 749, x2: 751 }, ease: es });
-    return tl;
-}
+// PHASE 1 — garis isi dulu
+tl.to(".top-line", { width: "100%", ease: "none" }, 0);
+tl.to(".bottom-line", { width: "100%", ease: "none" }, 0);
 
-master.from("#name", 2, { autoAlpha: 0, ease: "none" });
-master.add(flyBy());
+// PHASE 2 — garis & panel nutup BERSAMAAN
+tl.to(
+    ".top-line",
+    {
+        top: "50%", // garis turun
+        ease: "power2.out",
+    },
+    1
+);
 
-// but.addEventListener("click", function () {
-//     if (master.paused()) {
-//         master.play();
-//         but.innerHTML = "Pause";
-//     } else {
-//         master.pause();
-//         but.innerHTML = "Play";
-//     }
-// });
+tl.to(
+    ".bottom-line",
+    {
+        bottom: "50%", // garis naik
+        ease: "power2.out",
+    },
+    1
+);
+
+tl.to(
+    ".top-panel",
+    {
+        top: "0%", // panel turun bareng
+        ease: "power2.out",
+    },
+    1
+);
+
+tl.to(
+    ".bottom-panel",
+    {
+        bottom: "0%", // panel naik bareng
+        ease: "power2.out",
+    },
+    1
+);
+
+// PHASE 3 — setelah nutup → garis shrink ke tengah
+tl.to(
+    ".top-line, .bottom-line",
+    {
+        scaleX: 0,
+        transformOrigin: "center center",
+        ease: "power1.in",
+    },
+    1.5
+);
