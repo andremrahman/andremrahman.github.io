@@ -1,8 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
+
 let sec = document.querySelector(".section");
 let line = sec.querySelector(".reveal-line");
 let cover = sec.querySelector(".cover");
 let content = sec.querySelector(".content");
+
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: sec,
@@ -11,7 +13,9 @@ let tl = gsap.timeline({
         scrub: 1.2, // markers: true
     },
 });
+
 const dropSpeed = 0.8;
+
 // titik → melebar (scaleX bukan width)
 tl.to(line, { scaleX: 1, duration: 0.3, ease: "power2.out" }); // garis turun (translateY, no CLS)
 tl.to(line, { y: "100vh", duration: dropSpeed, ease: "power2.inOut" }, "<"); // cover turun bareng garis (no CLS)

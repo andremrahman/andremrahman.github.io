@@ -21,7 +21,7 @@
     top: 0;
     left: 50%;
     width: 100%;
-    height: 3px;
+    height: 5px;
     background: #ffffff;
     transform: translateX(-50%) scaleX(0);
     transform-origin: center center;

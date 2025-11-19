@@ -4,7 +4,7 @@
   <section class="h-screen w-screen"></section>
   <div class="section">
     <div class="cover"></div>
-    <div class="reveal-line"></div>
+    <div class="reveal-line rounded-3xl"></div>
     <div class="content">
       <h1>Judul Konten</h1>
       <p>Isi konten panjang di sini...</p>
