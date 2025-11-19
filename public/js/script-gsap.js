@@ -5,53 +5,51 @@ let line = sec.querySelector(".reveal-line");
 let cover = sec.querySelector(".cover");
 let content = sec.querySelector(".content");
 
-// TIMELINE PANJANG (biar animasi lebih cepat dari scroll)
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: sec,
-        start: "top 80%", // masuk 20% layar
-        end: "top 20%", // sampai agak atas
-        scrub: 1.2, // <-- ini bikin animasi TELAT DIKIT sehingga terlihat LEBIH CEPAT
+        start: "top 80%",
+        end: "top 20%",
+        scrub: 1.2,
         // markers: true
     },
 });
 
-// 1) titik -> melebar hampir penuh
+// 1) Titik → melebar
 tl.to(line, {
     width: "100%",
     duration: 0.3,
     ease: "power2.out",
 });
 
-// 2) garis turun membuka layar
-tl.to(
-    line,
-    {
-        top: "100%",
-        duration: 0.8,
-        ease: "power2.inOut",
-    },
-    "-=0.1"
-);
+// DURASI & WAKTU SAMA PERSIS
+const dropSpeed = 0.8;
 
-// 3) cover ke-angkat ditarik garis
+// 2) Garis turun bareng cover
+tl.to(line, {
+    top: "100%",
+    duration: dropSpeed,
+    ease: "power2.inOut",
+});
+
+// 3) Cover turun bareng garis (tanpa overlap negatif)
 tl.to(
     cover,
     {
-        height: 0,
-        duration: 0.8,
+        top: "100%",
+        duration: dropSpeed,
         ease: "power2.inOut",
     },
-    "-=0.75"
-);
+    "<"
+); // < = MULAI PERSIS BERSAMA ANIMASI SEBELUMNYA
 
-// 4) garis hilang pelan
+// 4) Garis hilang
 tl.to(line, {
     opacity: 0,
     duration: 0.3,
 });
 
-// 5) konten muncul
+// 5) Konten fade muncul belakangan
 tl.to(content, {
     opacity: 1,
     duration: 0.5,
