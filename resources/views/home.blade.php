@@ -98,17 +98,16 @@
   </div>
 
 
-  <div id="timeline-container">
-    <div id="timeline" class="min-h-screen">
-      <section id="slide1" class="z-3 bg-zinc-800 rounded-t-2xl">BLUE
-
-      </section>
-
-
-      <section id="slide2" class="z-2 bg-[aqua] rounded-t-2xl">AQUA</section>
-      <section id="slide3" class="z-1 bg-green-500 rounded-t-2xl">GREEN</section>
+  <section class="h-screen w-screen"></section>
+  <div class="section">
+    <div class="cover"></div>
+    <div class="reveal-line rounded-3xl"></div>
+    <div class="content">
+      <h1>Judul Konten</h1>
+      <p>Isi konten panjang di sini...</p>
     </div>
   </div>
+  <section class="h-screen w-screen"></section>
 
 
   {{-- <section id="profil" class="bg-black shadow-[0_-1px_0_#000] text-white">
