@@ -110,33 +110,40 @@
   <section class="h-screen w-screen"></section>
 
 
-  {{-- <section id="profil" class="bg-black shadow-[0_-1px_0_#000] text-white">
+  <section id="profil" class="bg-black shadow-[0_-1px_0_#000] text-white">
     <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
       <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Profil Perusahaan</h1>
       <div class="text-base md:text-lg lg:text-xl my-4">
-        <p class="mb-5">
-          Berbekal keahlian dan pengalaman dalam menangani proyek-proyek konstruksi berskala menengah hingga besar,
-          <strong>PT Gajahmada Karya Mandiri</strong> telah berperan dalam perencanaan dan pembangunan pabrik,
-          apartemen,
-          gedung komersial,
-          hotel, rumah sakit, pemancangan tiang pancang, serta beragam infrastruktur seperti jembatan, kawasan industri,
-          jalan tol, jalan raya,
-          dan flyover di berbagai wilayah Indonesia.
+        <p class="split mb-5">
+          <span>
+            Berbekal keahlian dan pengalaman dalam menangani proyek-proyek konstruksi berskala menengah hingga besar,
+            <strong>PT Gajahmada Karya Mandiri</strong> telah berperan dalam perencanaan dan pembangunan pabrik,
+            apartemen,
+            gedung komersial,
+            hotel, rumah sakit, pemancangan tiang pancang, serta beragam infrastruktur seperti jembatan, kawasan
+            industri,
+            jalan tol, jalan raya,
+            dan flyover di berbagai wilayah Indonesia.
+          </span>
         </p>
 
-        <p class="mb-5">
-          Kami berkomitmen memberikan hasil sesuai kontrak dengan kualitas terbaik.
-          Didukung oleh sumber daya manusia profesional dan berpengalaman, kami selalu menghadirkan solusi konstruksi
-          yang
-          efektif, efisien, dan tepat waktu.
+        <p class="split mb-5">
+          <span>
+            Kami berkomitmen memberikan hasil sesuai kontrak dengan kualitas terbaik.
+            Didukung oleh sumber daya manusia profesional dan berpengalaman, kami selalu menghadirkan solusi konstruksi
+            yang
+            efektif, efisien, dan tepat waktu.
+          </span>
         </p>
 
-        <p class="mb-5">
-          Sebagai kontraktor umum, kami menyediakan layanan menyeluruh mulai dari perencanaan, desain, hingga
-          pembangunan
-          (plan, design, and build),
-          termasuk pelaksanaan proyek melalui kerja sama operasi (joint operation) dengan mitra lokal maupun
-          internasional.
+        <p class=" split mb-5">
+          <span>
+            Sebagai kontraktor umum, kami menyediakan layanan menyeluruh mulai dari perencanaan, desain, hingga
+            pembangunan
+            (plan, design, and build),
+            termasuk pelaksanaan proyek melalui kerja sama operasi (joint operation) dengan mitra lokal maupun
+            internasional.
+          </span>
         </p>
       </div>
     </div>
@@ -174,5 +181,5 @@
       Dengan menciptakan lingkungan perusahaan yang membuat tim kami terus belajar dan berkembang. Menyelesaikan
       pekerjaan dengan cepat dan solutif menjadi komitmen bersama.
     </p>
-  </section> --}}
+  </section>
 </x-layout>
