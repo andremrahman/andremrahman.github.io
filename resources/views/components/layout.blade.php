@@ -32,6 +32,7 @@
 
   <script src="{{ asset('js/gsap-section.js') }}"></script>
   <script src="{{ asset('js/gsap-text-scroll-roll.js') }}"></script>
+  <script src="{{ asset('js/gsap-split-text-title.js') }}"></script>
   <script src="{{ asset('js/gsap-split-text.js') }}"></script>
 
   <script src="{{ asset('js/script.js') }}"></script>
