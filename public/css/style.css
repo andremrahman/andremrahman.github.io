@@ -9,10 +9,19 @@
     transform: rotate(-45deg) translate(2px, -2px);
 }
 
+/*? custom color */
 .text-merah {
     color: #dc2929;
 }
 
 .bg-merah {
     background-color: #dc2929;
+}
+
+/*? railtext */
+.outlined-text {
+    color: black; /* Color of the text itself */
+    text-shadow: -1px -1px 0 white, /* Top-left shadow */ 1px -1px 0 white,
+        /* Top-right shadow */ -1px 1px 0 white,
+        /* Bottom-left shadow */ 1px 1px 0 white; /* Bottom-right shadow */
 }

@@ -1,6 +1,7 @@
 gsap.registerPlugin(ScrollTrigger);
 
-let sec = document.querySelector(".section");
+let sec = document.querySelector(".anim1-wrapper");
+let secHeight = sec.offsetHeight;
 let line = sec.querySelector(".reveal-line");
 let cover = sec.querySelector(".cover");
 let content = sec.querySelector(".content");
@@ -11,7 +12,7 @@ let tl = gsap.timeline({
         start: "top 80%",
         end: "top 20%",
         scrub: 1.2,
-        // markers: true
+        // markers: true,
     },
 });
 
@@ -26,7 +27,7 @@ tl.to(line, {
 
 // 2) Setelah GARIS FULL → garis turun (translateY)
 tl.to(line, {
-    y: "100vh",
+    y: secHeight,
     duration: dropSpeed,
     ease: "power2.inOut",
 });

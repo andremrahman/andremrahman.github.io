@@ -83,23 +83,22 @@
   </section>
 
   {{-- rail text --}}
-  <div
-    class="scrolling-text overflow-hidden min-h-1/5 w-full bg-black text-black text-shadow-lg text-shadow-white flex items-center py-[5vh] shadow-[0_-1px_0_#000]">
-    <div class="rail flex text-[5vh] md:text-[10vh] font-bold">
-      <p class="rail-text whitespace-nowrap px-2 py-4">
-        construct design foundation</p>
-      <p class="rail-text whitespace-nowrap px-2 py-4">
-        work build scaffolding blueprint</p>
-      <p class="rail-text whitespace-nowrap px-2 py-4">
-        plan site structure layout</p>
-      <p class="rail-text whitespace-nowrap px-2 py-4">
-        project develop architecture</p>
+  <div class="pt-20 py-20 md:pt-40 md:py-40">
+    <div class="scrolling-text overflow-hidden min-h-1/5 w-full outlined-text flex items-center shadow-[0_-1px_0_#000]">
+      <div class="rail flex text-4xl md:text-6xl lg:text-7xl font-bold">
+        <p class="rail-text whitespace-nowrap px-2 py-4">
+          construct design foundation</p>
+        <p class="rail-text whitespace-nowrap px-2 py-4">
+          work build scaffolding blueprint</p>
+        <p class="rail-text whitespace-nowrap px-2 py-4">
+          plan site structure layout</p>
+        <p class="rail-text whitespace-nowrap px-2 py-4">
+          project develop architecture</p>
+      </div>
     </div>
   </div>
 
-
-  <section class="h-screen w-screen"></section>
-  <div class="section">
+  <div class="anim1-wrapper bg-zinc-200 text-black h-screen">
     <div class="cover"></div>
     <div class="reveal-line rounded-3xl"></div>
     <div class="content">
@@ -107,6 +106,7 @@
       <p>Isi konten panjang di sini...</p>
     </div>
   </div>
+
   <section class="h-screen w-screen"></section>
 
 

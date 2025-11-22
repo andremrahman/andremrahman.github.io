@@ -22,15 +22,33 @@ const timer = gsap
 ScrollTrigger.create({
     trigger: ".scrolling-text",
     start: "top bottom",
-    end: "bottom top",
+    end: "bottom 20%",
+    // markers: true,
+
+    onEnter: () => {
+        tlRailText.play();
+        gsap.to(".scrolling-text", { opacity: 1, duration: 0.3 });
+    },
+    onEnterBack: () => {
+        tlRailText.play();
+        gsap.to(".scrolling-text", { opacity: 1, duration: 0.3 });
+    },
+
+    onLeave: () => {
+        tlRailText.pause();
+        gsap.to(".scrolling-text", { opacity: 0, duration: 0.3 });
+    },
+    onLeaveBack: () => {
+        tlRailText.pause();
+        gsap.to(".scrolling-text", { opacity: 0, duration: 0.3 });
+    },
+
     onUpdate: (self) => {
         tlRailText.timeScale(0);
         lastDirection = self.direction;
-        // tlRailText.progress(tlRailText.progress() + lastDirection * 0.01);
         tlRailText.progress(tlRailText.progress() + lastDirection * 0.004);
         timer.restart(true);
     },
-    // markers: true,
 });
 
 /*

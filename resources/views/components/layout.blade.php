@@ -19,7 +19,7 @@
   <title>{{ $title }}</title>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
   <x-navbar></x-navbar>
   <main class="font-montserrat text-white bg-black">
     {{ $slot }}

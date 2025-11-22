@@ -1,18 +1,18 @@
-.section {
+.anim1-wrapper {
     position: relative;
-    width: 100%;
-    height: 100vh;
+    /* width: 100%;
+    height: 100vh; */
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 40px;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 .cover {
     position: absolute;
     inset: 0;
-    background: #555;
+    background: oklch(21% 0.006 285.885); /* zinc-900 */
     z-index: 5;
     transform: translateY(0%);
 }
@@ -22,7 +22,7 @@
     left: 50%;
     width: 100%;
     height: 5px;
-    background: #ffffff;
+    background: oklch(92% 0.004 286.32); /* zinc-200*/
     transform: translateX(-50%) scaleX(0);
     transform-origin: center center;
     z-index: 9999;
