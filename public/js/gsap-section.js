@@ -10,7 +10,7 @@ let tl = gsap.timeline({
     scrollTrigger: {
         trigger: sec,
         start: "top 80%",
-        end: "top 20%",
+        end: "top 30%",
         scrub: 1.2,
         // markers: true,
     },
@@ -36,7 +36,7 @@ tl.to(line, {
 tl.to(
     cover,
     {
-        y: "100%",
+        y: secHeight,
         duration: dropSpeed,
         ease: "power2.inOut",
     },
@@ -49,9 +49,8 @@ tl.to(line, {
     duration: 0.3,
 });
 
-// 5) Konten muncul
-tl.to(content, {
-    opacity: 1,
-    duration: 0.5,
-    ease: "power1.out",
+// 5) cover hilang
+tl.to(cover, {
+    opacity: 0,
+    duration: 0.3,
 });

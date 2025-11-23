@@ -4,8 +4,7 @@
 
 
   <div class="container flex justify-center p-10 text-white">
-    <div class="title-anim text-center perspective-normal
-">
+    <div class="title-anim text-center perspective-normal">
       Break apart HTML text into characters, words, and/or lines for easy animation.
     </div>
   </div>

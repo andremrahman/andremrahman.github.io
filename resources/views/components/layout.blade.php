@@ -21,7 +21,7 @@
 
 <body class="overflow-x-hidden">
   <x-navbar></x-navbar>
-  <main class="font-montserrat text-white bg-black">
+  <main class="font-montserrat text-neutral-100 bg-black">
     {{ $slot }}
   </main>
 

@@ -1,16 +1,25 @@
 document.fonts.ready.then(() => {
-    // baru SplitText supaya text gak loncat karena font belum loaded
     gsap.registerPlugin(ScrollTrigger, SplitText);
 
-    document.fonts.ready.then(() => {
-        const paragraphs = document.querySelectorAll(".split");
+    const paragraphs = document.querySelectorAll(".split");
 
+    function init() {
         paragraphs.forEach((p) => {
-            // Split by lines
+            // Revert split sebelumnya (kalau ada)
+            if (p._split) {
+                p._split.revert();
+            }
+
+            // Bersihin whitespace
+            p.textContent = p.textContent.replace(/\s+/g, " ").trim();
+
+            // Bikin split baru
             const split = new SplitText(p, {
                 type: "lines",
                 linesClass: "line",
             });
+
+            p._split = split;
 
             // Initial states
             gsap.set(split.lines, {
@@ -18,16 +27,13 @@ document.fonts.ready.then(() => {
                 opacity: 0,
             });
 
-            // ===========================
-            //  FADE-IN + SLIDE-IN (scroll up ke start)
-            // ===========================
+            // Fade-in
             gsap.timeline({
                 scrollTrigger: {
                     trigger: p,
-                    start: "top 95%", // mulai muncul
-                    end: "top 70%", // selesai muncul
+                    start: "top 95%",
+                    end: "top 70%",
                     scrub: true,
-                    markers: true,
                 },
             }).to(split.lines, {
                 yPercent: 0,
@@ -36,16 +42,13 @@ document.fonts.ready.then(() => {
                 stagger: 0.12,
             });
 
-            // ===========================
-            //  FADE-OUT + SLIDE-UP (scroll naik lewat end)
-            // ===========================
+            // Fade-out
             gsap.timeline({
                 scrollTrigger: {
                     trigger: p,
-                    start: "bottom 25%", // mulai hilang
-                    end: "bottom 15%", // selesai hilang
+                    start: "bottom 25%",
+                    end: "bottom 8%",
                     scrub: true,
-                    // markers: true,
                 },
             }).to(split.lines, {
                 yPercent: -50,
@@ -54,5 +57,20 @@ document.fonts.ready.then(() => {
                 stagger: 0.07,
             });
         });
+
+        // Safe refresh
+        ScrollTrigger.refresh(true);
+    }
+
+    // Jalankan awal
+    init();
+
+    // Re-init saat resize
+    let t;
+    window.addEventListener("resize", () => {
+        clearTimeout(t);
+        t = setTimeout(() => {
+            init();
+        }, 250);
     });
 });

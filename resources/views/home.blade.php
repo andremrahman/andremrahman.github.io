@@ -1,37 +1,5 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
-  {{-- <section class="w-full min-h-[calc(100vh-4rem)] flex items-center justify-center px-6">
-    <div class="max-w-6xl w-full">
-      <div class="text-xl">
-        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4">PT Gajahmada Karya Mandiri</h2>
-        <p class="text-base md:text-lg lg:text-xl text-gray-600 mb-6 font-montserrat">
-          Kami berkomitmen menghadirkan hasil <strong>konstruksi</strong> terbaik
-          dengan mengutamakan ketepatan waktu, mutu, dan kepuasan klien.
-        </p>
-        <a href="/layanan"
-          class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-indigo-600 transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
-          <span
-            class="absolute bottom-0 left-0 w-full h-1 transition-all duration-150 ease-in-out bg-indigo-600 group-hover:h-full"></span>
-          <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
-            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </span>
-          <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
-            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-            </svg>
-          </span>
-          <span
-            class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white">Lihat
-            Layanan Kami</span>
-        </a>
-      </div>
-    </div>
-
-  </section> --}}
 
   <section id="hero" class="relative w-full min-h-screen overflow-hidden bg-black flex items-center">
     <!-- Gambar background -->
@@ -44,7 +12,7 @@
     <!-- Konten teks -->
     <div class="w-full">
       <div class="mx-auto px-4 max-w-7xl mt-16 py-8 md:py-16 sm:px-6 lg:px-8">
-        <div class="md:w-1/2 relative z-10 flex flex-col justify-center items-start text-start h-full text-white">
+        <div class="md:w-1/2 relative z-10 flex flex-col justify-center items-start text-start h-full">
           <h1 class="text-base md:text-lg lg:text-xl [text-shadow:1px_2px_2px_black]">Welcome to</h1>
           <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold [text-shadow:2px_4px_4px_black] leading-tight">
             PT Gajahmada Karya Mandiri</h1>
@@ -74,8 +42,9 @@
               </svg>
             </span>
             <span
-              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">Discover
-              Our Services</span>
+              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">
+              Discover Our Services
+            </span>
           </a>
         </div>
       </div>
@@ -98,56 +67,117 @@
     </div>
   </div>
 
-  <div class="anim1-wrapper bg-zinc-200 text-black h-screen">
+  <section id="about" class="anim1-wrapper bg-neutral-800">
     <div class="cover"></div>
     <div class="reveal-line rounded-3xl"></div>
-    <div class="content">
-      <h1>Judul Konten</h1>
-      <p>Isi konten panjang di sini...</p>
-    </div>
+    <div class="content w-full">
+
+      <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
+        <div class="relative md:flex items-center">
+          <div class="w-full md:w-1/2">
+            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">About Us
+            </h1>
+            <div class="text-base md:text-lg lg:text-xl my-4 text-start">
+              <p class="split mb-4">
+                <span>
+                  Backed by strong technical expertise, <span class="font-bold">PT Gajahmada Karya Mandiri</span> has
+                  led
+                  the
+                  planning and construction of factories, apartments, commercial buildings, hotels, hospitals, piling
+                  works,
+                  and major infrastructure such as bridges, industrial estates, toll roads, highways, and flyovers.
+                </span>
+              </p>
+
+              <p class="split mb-4">
+                <span>
+                  We are committed to delivering every project with exceptional quality, precision, and on-schedule
+                  performance. Supported by an experienced professional team, we provide construction solutions that are
+                  efficient, reliable, and built for long-term value.
+                </span>
+              </p>
+
+              <p class="split">
+                <span>
+                  As a full-service general contractor, we handle end-to-end services—from planning and design to full
+                  project
+                  execution, including joint operations with trusted local and international partners.
+                </span>
+              </p>
+            </div>
+          </div>
+          <img src="{{ asset('img/about.webp') }}" alt="About"
+            class="md:w-1/2 md:py-8 md:pl-6 lg:pl-8 object-cover md:max-lg:aspect-2/3">
+          </img>
+        </div>
+      </div>
+  </section>
+
+  {{-- spacer --}}
+  <div class="pt-20 py-20 md:pt-40 md:py-40 bg-red-500">
   </div>
 
-  <section class="h-screen w-screen"></section>
+  {{-- <section class="h-screen w-screen"></section> --}}
 
-
-  <section id="profil" class="bg-black shadow-[0_-1px_0_#000] text-white">
+  {{-- <section id="about" class="bg-black shadow-[0_-1px_0_#000] text-white">
     <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
-      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">Profil Perusahaan</h1>
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">About Us</h1>
       <div class="text-base md:text-lg lg:text-xl my-4">
         <p class="split mb-5">
           <span>
-            Berbekal keahlian dan pengalaman dalam menangani proyek-proyek konstruksi berskala menengah hingga besar,
-            <strong>PT Gajahmada Karya Mandiri</strong> telah berperan dalam perencanaan dan pembangunan pabrik,
-            apartemen,
-            gedung komersial,
-            hotel, rumah sakit, pemancangan tiang pancang, serta beragam infrastruktur seperti jembatan, kawasan
-            industri,
-            jalan tol, jalan raya,
-            dan flyover di berbagai wilayah Indonesia.
+            Backed by strong technical expertise, <strong>PT Gajahmada Karya Mandiri</strong> has led the planning and
+            construction of factories, apartments, commercial buildings, hotels, hospitals, piling works, and major
+            infrastructure such as bridges, industrial estates, toll roads, highways, and flyovers.
           </span>
         </p>
 
         <p class="split mb-5">
           <span>
-            Kami berkomitmen memberikan hasil sesuai kontrak dengan kualitas terbaik.
-            Didukung oleh sumber daya manusia profesional dan berpengalaman, kami selalu menghadirkan solusi konstruksi
-            yang
-            efektif, efisien, dan tepat waktu.
+            We are committed to delivering every project with exceptional quality, precision, and on-schedule
+            performance. Supported by an experienced professional team, we provide construction solutions that are
+            efficient, reliable, and built for long-term value.
           </span>
         </p>
 
         <p class=" split mb-5">
           <span>
-            Sebagai kontraktor umum, kami menyediakan layanan menyeluruh mulai dari perencanaan, desain, hingga
-            pembangunan
-            (plan, design, and build),
-            termasuk pelaksanaan proyek melalui kerja sama operasi (joint operation) dengan mitra lokal maupun
-            internasional.
+            As a full-service general contractor, we handle end-to-end services—from planning and design to full project
+            execution, including joint operations with trusted local and international partners.
           </span>
         </p>
       </div>
     </div>
-  </section>
+  </section> --}}
+
+  {{-- <section id="about" class="bg-black shadow-[0_-1px_0_#000] text-white">
+    <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">About Us</h1>
+      <div class="text-base md:text-lg lg:text-xl my-4">
+        <p class="split mb-5">
+          <span>
+            Backed by strong technical expertise, <strong>PT Gajahmada Karya Mandiri</strong> has led the planning and
+            construction of factories, apartments, commercial buildings, hotels, hospitals, piling works, and major
+            infrastructure such as bridges, industrial estates, toll roads, highways, and flyovers.
+          </span>
+        </p>
+
+        <p class="split mb-5">
+          <span>
+            We are committed to delivering every project with exceptional quality, precision, and on-schedule
+            performance. Supported by an experienced professional team, we provide construction solutions that are
+            efficient, reliable, and built for long-term value.
+          </span>
+        </p>
+
+        <p class=" split mb-5">
+          <span>
+            As a full-service general contractor, we handle end-to-end services—from planning and design to full project
+            execution, including joint operations with trusted local and international partners.
+          </span>
+        </p>
+      </div>
+    </div>
+  </section> --}}
 
   <section id="visimisi" class="bg-black shadow-[0_-1px_0_#000] text-white">
     <h2>Visi</h2>
