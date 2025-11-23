@@ -53,4 +53,5 @@ tl.to(line, {
 tl.to(cover, {
     opacity: 0,
     duration: 0.3,
+    pointerEvents: "none",
 });

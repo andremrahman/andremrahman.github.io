@@ -75,15 +75,15 @@
       <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
         <div class="relative md:flex items-center">
           <div class="w-full md:w-1/2">
-            <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">About Us
-            </h1>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal"
+              data-start="top 60%" data-end="top 70%">About Us
+            </h2>
             <div class="text-base md:text-lg lg:text-xl my-4 text-start">
               <p class="split mb-4">
                 <span>
                   Backed by strong technical expertise, <span class="font-bold">PT Gajahmada Karya Mandiri</span> has
-                  led
-                  the
-                  planning and construction of factories, apartments, commercial buildings, hotels, hospitals, piling
+                  led the planning and construction of factories, apartments, commercial buildings, hotels, hospitals,
+                  piling
                   works,
                   and major infrastructure such as bridges, industrial estates, toll roads, highways, and flyovers.
                 </span>
@@ -114,7 +114,7 @@
   </section>
 
   {{-- spacer --}}
-  <div class="pt-20 py-20 md:pt-40 md:py-40 bg-red-500">
+  <div class="pt-20 py-20 md:pt-40 md:py-40">
   </div>
 
   {{-- <section class="h-screen w-screen"></section> --}}
@@ -179,26 +179,43 @@
     </div>
   </section> --}}
 
-  <section id="visimisi" class="bg-black shadow-[0_-1px_0_#000] text-white">
-    <h2>Visi</h2>
-    <p>Menjadi Perusahaan Jasa Konstruksi yang terkemuka dan terpecaya dengan menyediakan produk-produk berkualitas
-      dan
-      menciptakan nilai yang optimal bagi pelanggan, pemegang saham, karyawan dan masyarakat Mendukung kemajuan
-      pembangunan bangsa Indonesia melalui pembangunan proyek berskala besar maupun kecil, untuk memberikan kepuasan
-      pelanggan melalui ketepatan dalam segi kualitas, waktu penyelesaian pekerjaan dan biaya dengan didukung oleh
-      kehandalan Sumber Daya Manusia dan menggunakan teknologi yang paling efisien
-    </p>
-    <h2>Misi</h2>
-    <ul>
-      <li>Memastikan kepuasan klien</li>
-      <li>Usaha perbaikan pelayanan secara berkesinambungan</li>
-      <li>Lugas dan jelas dalam memberi jasa konsultasi</li>
-      <li>Tepat waktu dalam pengerjaan</li>
-      <li>Informatif</li>
-      <li>Patuh terhadap persyaratan klien dan peraturan perundang-undangan</li>
-      <li>Lihai dalam melihat peluang perbaikan</li>
-      <li>Edukasi terencana untuk peningkatan kompetensi karyawan</li>
-    </ul>
+  <section id="vision-mission" class="bg-neutral-200 text-black">
+    <div class="w-full">
+      <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">Our Vision
+        </h2>
+        <p class="split mb-4">
+          <span>
+            To become a leading and trusted construction company by delivering high-quality products and creating
+            optimal
+            value for customers, shareholders, employees, and society.
+          </span>
+        </p>
+        <p class="split">
+          <span>We are committed to supporting the nation’s development through both large and small-scale construction
+            projects, ensuring customer satisfaction
+            through consistent excellence in quality, on-time project
+            completion, and cost efficiency — all supported by reliable
+            human resources and the use of the most effective
+            technologies.</span>
+        </p>
+        <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal mt-10">Our
+          Mission
+        </h2>
+        <ul class="list-disc ml-6">
+          <li>Ensuring client satisfaction</li>
+          <li>Continuous improvement of service quality</li>
+          <li>Clear and concise consultation services</li>
+          <li>On-time project completion</li>
+          <li>Informative communication</li>
+          <li>Compliance with client requirements and regulations</li>
+          <li>Skilled at identifying improvement opportunities</li>
+          <li>Planned education to enhance employee competence</li>
+
+        </ul>
+
+      </div>
+    </div>
   </section>
   <section id="sdm" class="">
     <h2>Sumber Daya Manusia</h2>
