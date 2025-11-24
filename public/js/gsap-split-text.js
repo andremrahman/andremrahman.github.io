@@ -3,17 +3,12 @@ document.fonts.ready.then(() => {
 
     const paragraphs = document.querySelectorAll(".split");
 
-    function init() {
+    function initSplitText() {
         paragraphs.forEach((p) => {
-            // Revert split sebelumnya (kalau ada)
-            if (p._split) {
-                p._split.revert();
-            }
+            if (p._split) p._split.revert();
 
-            // Bersihin whitespace
             p.textContent = p.textContent.replace(/\s+/g, " ").trim();
 
-            // Bikin split baru
             const split = new SplitText(p, {
                 type: "lines",
                 linesClass: "line",
@@ -21,13 +16,8 @@ document.fonts.ready.then(() => {
 
             p._split = split;
 
-            // Initial states
-            gsap.set(split.lines, {
-                yPercent: 100,
-                opacity: 0,
-            });
+            gsap.set(split.lines, { yPercent: 100, opacity: 0 });
 
-            // Fade-in
             gsap.timeline({
                 scrollTrigger: {
                     trigger: p,
@@ -42,7 +32,6 @@ document.fonts.ready.then(() => {
                 stagger: 0.12,
             });
 
-            // Fade-out
             gsap.timeline({
                 scrollTrigger: {
                     trigger: p,
@@ -57,20 +46,38 @@ document.fonts.ready.then(() => {
                 stagger: 0.07,
             });
         });
-
-        // Safe refresh
-        ScrollTrigger.refresh(true);
     }
 
-    // Jalankan awal
-    init();
+    // init awal
+    initSplitText();
+
+    // animate list
+    gsap.utils.toArray(".li-item").forEach((item) => {
+        gsap.fromTo(
+            item,
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 90%",
+                    end: "bottom 18%",
+                    toggleActions: "play reverse play reverse",
+                },
+            }
+        );
+    });
 
     // Re-init saat resize
     let t;
     window.addEventListener("resize", () => {
         clearTimeout(t);
         t = setTimeout(() => {
-            init();
+            initSplitText();
+            ScrollTrigger.refresh(true);
         }, 250);
     });
 });

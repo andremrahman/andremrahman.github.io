@@ -13,7 +13,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    width: 100%;
+    width: 100vw;
     height: 7px;
     background: oklch(92.2% 0 0); /* neutral-200*/
     transform: translateX(-50%) scaleX(0);

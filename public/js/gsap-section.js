@@ -1,10 +1,9 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let sec = document.querySelector(".anim1-wrapper");
-let secHeight = sec.offsetHeight;
+let secHeight = () => sec.offsetHeight;
 let line = sec.querySelector(".reveal-line");
 let cover = sec.querySelector(".cover");
-let content = sec.querySelector(".content");
 
 let tl = gsap.timeline({
     scrollTrigger: {
@@ -43,15 +42,15 @@ tl.to(
     "<"
 ); // tetap bersamaan dengan animasi garis turun
 
-// 4) Hilangin garis
+// 4) cover hilang
+tl.to(cover, {
+    opacity: 0,
+    duration: 0.1,
+    pointerEvents: "none",
+});
+
+// 5) Hilangin garis
 tl.to(line, {
     opacity: 0,
     duration: 0.3,
-});
-
-// 5) cover hilang
-tl.to(cover, {
-    opacity: 0,
-    duration: 0.3,
-    pointerEvents: "none",
 });

@@ -1,57 +1,58 @@
 //? TEXT SCROLL ROLL
-const scrollingText = gsap.utils.toArray(".rail .rail-text");
+document.fonts.ready.then(() => {
+    const scrollingText = gsap.utils.toArray(".rail .rail-text");
 
-const tlRailText = horizontalLoop(scrollingText, {
-    repeat: -1,
-});
-const progressWrap = gsap.utils.wrap(0, 1);
+    const tlRailText = horizontalLoop(scrollingText, {
+        repeat: -1,
+    });
+    const progressWrap = gsap.utils.wrap(0, 1);
 
-let speedTween, lastDirection, loopTween;
+    let speedTween, lastDirection, loopTween;
 
-const timer = gsap
-    .delayedCall(0.2, () => {
-        loopTween && loopTween.kill();
-        loopTween = gsap.to(tlRailText, {
-            timeScale: lastDirection,
-            duration: 0.25,
-            ease: "none",
-        });
-    })
-    .pause();
+    const timer = gsap
+        .delayedCall(0.2, () => {
+            loopTween && loopTween.kill();
+            loopTween = gsap.to(tlRailText, {
+                timeScale: lastDirection,
+                duration: 0.25,
+                ease: "none",
+            });
+        })
+        .pause();
 
-ScrollTrigger.create({
-    trigger: ".scrolling-text",
-    start: "top bottom",
-    end: "bottom 20%",
-    // markers: true,
+    ScrollTrigger.create({
+        trigger: ".scrolling-text",
+        start: "top bottom",
+        end: "bottom 20%",
+        // markers: true,
 
-    onEnter: () => {
-        tlRailText.play();
-        gsap.to(".scrolling-text", { opacity: 1, duration: 0.3 });
-    },
-    onEnterBack: () => {
-        tlRailText.play();
-        gsap.to(".scrolling-text", { opacity: 1, duration: 0.3 });
-    },
+        onEnter: () => {
+            tlRailText.play();
+            gsap.to(".scrolling-text", { opacity: 1, duration: 0.3 });
+        },
+        onEnterBack: () => {
+            tlRailText.play();
+            gsap.to(".scrolling-text", { opacity: 1, duration: 0.3 });
+        },
 
-    onLeave: () => {
-        tlRailText.pause();
-        gsap.to(".scrolling-text", { opacity: 0, duration: 0.3 });
-    },
-    onLeaveBack: () => {
-        tlRailText.pause();
-        gsap.to(".scrolling-text", { opacity: 0, duration: 0.3 });
-    },
+        onLeave: () => {
+            tlRailText.pause();
+            gsap.to(".scrolling-text", { opacity: 0, duration: 0.3 });
+        },
+        onLeaveBack: () => {
+            tlRailText.pause();
+            gsap.to(".scrolling-text", { opacity: 0, duration: 0.3 });
+        },
 
-    onUpdate: (self) => {
-        tlRailText.timeScale(0);
-        lastDirection = self.direction;
-        tlRailText.progress(tlRailText.progress() + lastDirection * 0.004);
-        timer.restart(true);
-    },
-});
+        onUpdate: (self) => {
+            tlRailText.timeScale(0);
+            lastDirection = self.direction;
+            tlRailText.progress(tlRailText.progress() + lastDirection * 0.004);
+            timer.restart(true);
+        },
+    });
 
-/*
+    /*
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 
 Features:
@@ -65,111 +66,113 @@ Features:
    - current() - returns the current index (if an animation is in-progress, it reflects the final index)
    - times - an Array of the times on the timeline where each element hits the "starting" spot. There's also a label added accordingly, so "label1" is when the 2nd element reaches the start.
  */
-function horizontalLoop(items, config) {
-    items = gsap.utils.toArray(items);
-    config = config || {};
-    let tl = gsap.timeline({
-            repeat: config.repeat,
-            paused: config.paused,
-            defaults: { ease: "none" },
-            onReverseComplete: () =>
-                tl.totalTime(tl.rawTime() + tl.duration() * 100),
-        }),
-        length = items.length,
-        startX = items[0].offsetLeft,
-        times = [],
-        widths = [],
-        xPercents = [],
-        curIndex = 0,
-        pixelsPerSecond = (config.speed || 1) * 200,
-        snap =
-            config.snap === false
-                ? (v) => v
-                : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
-        totalWidth,
-        curX,
-        distanceToStart,
-        distanceToLoop,
-        item,
-        i;
-    gsap.set(items, {
-        // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
-        xPercent: (i, el) => {
-            let w = (widths[i] = parseFloat(
-                gsap.getProperty(el, "width", "px")
-            ));
-            xPercents[i] = snap(
-                (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
-                    gsap.getProperty(el, "xPercent")
-            );
-            return xPercents[i];
-        },
-    });
-    gsap.set(items, { x: 0 });
-    totalWidth =
-        items[length - 1].offsetLeft +
-        (xPercents[length - 1] / 100) * widths[length - 1] -
-        startX +
-        items[length - 1].offsetWidth *
-            gsap.getProperty(items[length - 1], "scaleX") +
-        (parseFloat(config.paddingRight) || 0);
-    for (i = 0; i < length; i++) {
-        item = items[i];
-        curX = (xPercents[i] / 100) * widths[i];
-        distanceToStart = item.offsetLeft + curX - startX;
-        distanceToLoop =
-            distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
-        tl.to(
+    function horizontalLoop(items, config) {
+        items = gsap.utils.toArray(items);
+        config = config || {};
+        let tl = gsap.timeline({
+                repeat: config.repeat,
+                paused: config.paused,
+                defaults: { ease: "none" },
+                onReverseComplete: () =>
+                    tl.totalTime(tl.rawTime() + tl.duration() * 100),
+            }),
+            length = items.length,
+            startX = items[0].offsetLeft,
+            times = [],
+            widths = [],
+            xPercents = [],
+            curIndex = 0,
+            pixelsPerSecond = (config.speed || 1) * 200,
+            snap =
+                config.snap === false
+                    ? (v) => v
+                    : gsap.utils.snap(config.snap || 1), // some browsers shift by a pixel to accommodate flex layouts, so for example if width is 20% the first element's width might be 242px, and the next 243px, alternating back and forth. So we snap to 5 percentage points to make things look more natural
+            totalWidth,
+            curX,
+            distanceToStart,
+            distanceToLoop,
             item,
-            {
-                xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
-                duration: distanceToLoop / pixelsPerSecond,
+            i;
+        gsap.set(items, {
+            // convert "x" to "xPercent" to make things responsive, and populate the widths/xPercents Arrays to make lookups faster.
+            xPercent: (i, el) => {
+                let w = (widths[i] = parseFloat(
+                    gsap.getProperty(el, "width", "px")
+                ));
+                xPercents[i] = snap(
+                    (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100 +
+                        gsap.getProperty(el, "xPercent")
+                );
+                return xPercents[i];
             },
-            0
-        )
-            .fromTo(
+        });
+        gsap.set(items, { x: 0 });
+        totalWidth =
+            items[length - 1].offsetLeft +
+            (xPercents[length - 1] / 100) * widths[length - 1] -
+            startX +
+            items[length - 1].offsetWidth *
+                gsap.getProperty(items[length - 1], "scaleX") +
+            (parseFloat(config.paddingRight) || 0);
+        for (i = 0; i < length; i++) {
+            item = items[i];
+            curX = (xPercents[i] / 100) * widths[i];
+            distanceToStart = item.offsetLeft + curX - startX;
+            distanceToLoop =
+                distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+            tl.to(
                 item,
                 {
-                    xPercent: snap(
-                        ((curX - distanceToLoop + totalWidth) / widths[i]) * 100
-                    ),
+                    xPercent: snap(((curX - distanceToLoop) / widths[i]) * 100),
+                    duration: distanceToLoop / pixelsPerSecond,
                 },
-                {
-                    xPercent: xPercents[i],
-                    duration:
-                        (curX - distanceToLoop + totalWidth - curX) /
-                        pixelsPerSecond,
-                    immediateRender: false,
-                },
-                distanceToLoop / pixelsPerSecond
+                0
             )
-            .add("label" + i, distanceToStart / pixelsPerSecond);
-        times[i] = distanceToStart / pixelsPerSecond;
-    }
-    function toIndex(index, vars) {
-        vars = vars || {};
-        Math.abs(index - curIndex) > length / 2 &&
-            (index += index > curIndex ? -length : length); // always go in the shortest direction
-        let newIndex = gsap.utils.wrap(0, length, index),
-            time = times[newIndex];
-        if (time > tl.time() !== index > curIndex) {
-            // if we're wrapping the timeline's playhead, make the proper adjustments
-            vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
-            time += tl.duration() * (index > curIndex ? 1 : -1);
+                .fromTo(
+                    item,
+                    {
+                        xPercent: snap(
+                            ((curX - distanceToLoop + totalWidth) / widths[i]) *
+                                100
+                        ),
+                    },
+                    {
+                        xPercent: xPercents[i],
+                        duration:
+                            (curX - distanceToLoop + totalWidth - curX) /
+                            pixelsPerSecond,
+                        immediateRender: false,
+                    },
+                    distanceToLoop / pixelsPerSecond
+                )
+                .add("label" + i, distanceToStart / pixelsPerSecond);
+            times[i] = distanceToStart / pixelsPerSecond;
         }
-        curIndex = newIndex;
-        vars.overwrite = true;
-        return tl.tweenTo(time, vars);
+        function toIndex(index, vars) {
+            vars = vars || {};
+            Math.abs(index - curIndex) > length / 2 &&
+                (index += index > curIndex ? -length : length); // always go in the shortest direction
+            let newIndex = gsap.utils.wrap(0, length, index),
+                time = times[newIndex];
+            if (time > tl.time() !== index > curIndex) {
+                // if we're wrapping the timeline's playhead, make the proper adjustments
+                vars.modifiers = { time: gsap.utils.wrap(0, tl.duration()) };
+                time += tl.duration() * (index > curIndex ? 1 : -1);
+            }
+            curIndex = newIndex;
+            vars.overwrite = true;
+            return tl.tweenTo(time, vars);
+        }
+        tl.next = (vars) => toIndex(curIndex + 1, vars);
+        tl.previous = (vars) => toIndex(curIndex - 1, vars);
+        tl.current = () => curIndex;
+        tl.toIndex = (index, vars) => toIndex(index, vars);
+        tl.times = times;
+        tl.progress(1, true).progress(0, true); // pre-render for performance
+        if (config.reversed) {
+            tl.vars.onReverseComplete();
+            tl.reverse();
+        }
+        return tl;
     }
-    tl.next = (vars) => toIndex(curIndex + 1, vars);
-    tl.previous = (vars) => toIndex(curIndex - 1, vars);
-    tl.current = () => curIndex;
-    tl.toIndex = (index, vars) => toIndex(index, vars);
-    tl.times = times;
-    tl.progress(1, true).progress(0, true); // pre-render for performance
-    if (config.reversed) {
-        tl.vars.onReverseComplete();
-        tl.reverse();
-    }
-    return tl;
-}
+});
