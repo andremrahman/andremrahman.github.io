@@ -17,8 +17,9 @@
 }
 
 @font-face {
-    font-family: "Cookie";
-    src: url("../../public/fonts/Cookie-Regular.woff2") format("woff2");
+    font-family: "Oswald";
+    src: url("../../public/fonts/Oswald-VariableFont_wght.woff2")
+        format("woff2");
 }
 
 @theme {
@@ -31,7 +32,7 @@
     --font-montserrat: "Montserrat", "Instrument Sans", ui-sans-serif, system-ui,
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
-    --font-cookie: "Cookie", "Instrument Sans", ui-sans-serif, system-ui,
+    --font-oswald: "Oswald", "Instrument Sans", ui-sans-serif, system-ui,
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 }
