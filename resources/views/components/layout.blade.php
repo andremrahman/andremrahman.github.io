@@ -32,6 +32,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 
+  <script src="{{ asset('js/gsap-hero-text.js') }}"></script>
   <script src="{{ asset('js/gsap-section.js') }}"></script>
   <script src="{{ asset('js/gsap-text-scroll-roll.js') }}"></script>
   <script src="{{ asset('js/gsap-split-text-title.js') }}"></script>

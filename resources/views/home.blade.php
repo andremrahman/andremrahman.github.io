@@ -11,18 +11,17 @@
     <div class="absolute inset-0 bg-black/30 md:hidden"></div>
 
     <!-- Konten teks -->
-    {{-- todo debug bg-... --}}
     <div class="w-full">
-      <div class="max-w-7xl mx-auto mt-22 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto mt-22 px-4 sm:px-6 lg:px-8 uppercase">
 
         <div class="w-full md:w-1/2 relative z-10 flex flex-col items-start text-start h-full md:">
           <h1 class="text-base md:text-lg lg:text-xl">Welcome to</h1>
-          <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold [text-shadow:2px_4px_4px_black]">
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-shadow-lg/50 hero-text">
             PT Gajahmada Karya Mandiri</h1>
           <p class="text-base md:text-lg lg:text-xl my-2">We Build
             More Than
             Structures — We Build Trust</p>
-          <p class="text-base md:text-lg lg:text-xl font-thin mt-2 md:mt-4">
+          <p class="text-lg md:text-xl lg:text-2xl font-light mt-2 md:mt-4 uppercase">
             From concept to completion, we build with precision, dedication, and care to bring your vision to life.
           </p>
         </div>
@@ -30,7 +29,6 @@
     </div>
 
     {{-- button --}}
-    {{-- todo debug --}}
     <div class="w-full">
       <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-center md:justify-start">
 
@@ -62,15 +60,8 @@
 
   </section>
 
-
-
-
-
-
-
-
   {{-- rail text --}}
-  <div class="pt-20 py-20 md:pt-40 md:py-40 mask-x-from-70% mask-x-to-95% font-oswald">
+  <div class="pt-20 py-20 md:pt-40 md:py-40 mask-x-from-70% mask-x-to-95% font-oswald uppercase">
     <div
       class="scrolling-text overflow-hidden min-h-1/5 w-full text-neutral-200 flex items-center shadow-[0_-1px_0_#000]">
       <div class="rail flex text-4xl md:text-6xl lg:text-7xl">
@@ -221,6 +212,5 @@
       </div>
     </div>
   </section>
-  <div class="h-screen"></div>
 
 </x-layout>

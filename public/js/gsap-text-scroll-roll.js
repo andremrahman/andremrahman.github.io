@@ -1,5 +1,7 @@
 //? TEXT SCROLL ROLL
 document.fonts.ready.then(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const scrollingText = gsap.utils.toArray(".rail .rail-text");
 
     const tlRailText = horizontalLoop(scrollingText, {
