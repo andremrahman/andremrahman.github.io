@@ -19,11 +19,13 @@
   <title>{{ $title }}</title>
 </head>
 
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden text-white bg-black">
   <x-navbar></x-navbar>
-  <main class="font-montserrat text-neutral-100 bg-black">
+  <main class="font-montserrat">
     {{ $slot }}
   </main>
+
+  <x-footer></x-footer>
 
   {{-- gsap --}}
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>

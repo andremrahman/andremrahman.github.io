@@ -117,68 +117,6 @@
       </div>
   </section>
 
-  {{-- <section class="h-screen w-screen"></section> --}}
-
-  {{-- <section id="about" class="bg-black shadow-[0_-1px_0_#000] text-white">
-    <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
-      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">About Us</h1>
-      <div class="text-base md:text-lg lg:text-xl my-4">
-        <p class="split mb-5">
-          <span>
-            Backed by strong technical expertise, <strong>PT Gajahmada Karya Mandiri</strong> has led the planning and
-            construction of factories, apartments, commercial buildings, hotels, hospitals, piling works, and major
-            infrastructure such as bridges, industrial estates, toll roads, highways, and flyovers.
-          </span>
-        </p>
-
-        <p class="split mb-5">
-          <span>
-            We are committed to delivering every project with exceptional quality, precision, and on-schedule
-            performance. Supported by an experienced professional team, we provide construction solutions that are
-            efficient, reliable, and built for long-term value.
-          </span>
-        </p>
-
-        <p class=" split mb-5">
-          <span>
-            As a full-service general contractor, we handle end-to-end services—from planning and design to full project
-            execution, including joint operations with trusted local and international partners.
-          </span>
-        </p>
-      </div>
-    </div>
-  </section> --}}
-
-  {{-- <section id="about" class="bg-black shadow-[0_-1px_0_#000] text-white">
-    <div class="mx-auto px-4 max-w-7xl py-8 md:py-16 sm:px-6 lg:px-8">
-      <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal">About Us</h1>
-      <div class="text-base md:text-lg lg:text-xl my-4">
-        <p class="split mb-5">
-          <span>
-            Backed by strong technical expertise, <strong>PT Gajahmada Karya Mandiri</strong> has led the planning and
-            construction of factories, apartments, commercial buildings, hotels, hospitals, piling works, and major
-            infrastructure such as bridges, industrial estates, toll roads, highways, and flyovers.
-          </span>
-        </p>
-
-        <p class="split mb-5">
-          <span>
-            We are committed to delivering every project with exceptional quality, precision, and on-schedule
-            performance. Supported by an experienced professional team, we provide construction solutions that are
-            efficient, reliable, and built for long-term value.
-          </span>
-        </p>
-
-        <p class=" split mb-5">
-          <span>
-            As a full-service general contractor, we handle end-to-end services—from planning and design to full project
-            execution, including joint operations with trusted local and international partners.
-          </span>
-        </p>
-      </div>
-    </div>
-  </section> --}}
-
   <section id="vision-mission" class="bg-neutral-200 text-black ">
     <div class="w-full">
       <div class="mx-auto px-4 max-w-7xl py-16 md:py-32 sm:px-6 lg:px-8">
