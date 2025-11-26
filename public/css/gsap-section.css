@@ -7,23 +7,19 @@
     inset: 0;
     background: #000;
     z-index: 5;
-    transform: translateY(0%);
+    /* transform: translateY(0%); */
+    transform-origin: bottom;
+    transform: scaleY(1);
 }
 .reveal-line {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 50vw;
     width: 100vw;
     height: 7px;
     background: oklch(92.2% 0 0); /* neutral-200*/
-    transform: translateX(-50%) scaleX(0);
+    transform: translateX(-50vw) scaleX(0);
     transform-origin: center center;
     z-index: 9999;
     will-change: transform, opacity;
 }
-/* .content {
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    text-align: center;
-} */

@@ -1,7 +1,6 @@
 gsap.registerPlugin(ScrollTrigger);
 
 let sec = document.querySelector(".anim1-wrapper");
-let secHeight = () => sec.offsetHeight;
 let line = sec.querySelector(".reveal-line");
 let cover = sec.querySelector(".cover");
 
@@ -15,8 +14,6 @@ let tl = gsap.timeline({
     },
 });
 
-const dropSpeed = 0.8;
-
 // 1) Titik → melebar dulu (scaleX)
 tl.to(line, {
     scaleX: 1,
@@ -24,33 +21,27 @@ tl.to(line, {
     ease: "power2.out",
 });
 
-// 2) Setelah GARIS FULL → garis turun (translateY)
+// 2) garis full
 tl.to(line, {
-    y: secHeight,
-    duration: dropSpeed,
-    ease: "power2.inOut",
+    opacity: 0,
+    duration: 0,
 });
 
-// 3) Cover turun bersamaan dengan garis
-tl.to(
-    cover,
-    {
-        y: secHeight,
-        duration: dropSpeed,
-        ease: "power2.inOut",
-    },
-    "<"
-); // tetap bersamaan dengan animasi garis turun
+// 3) border gantiin garis
+tl.set(cover, {
+    borderTop: "7px solid oklch(92.2% 0 0)",
+});
+
+// 4) Cover turun
+tl.to(cover, {
+    scaleY: 0,
+    duration: 0.8,
+    ease: "none",
+});
 
 // 4) cover hilang
 tl.to(cover, {
     opacity: 0,
     duration: 0.1,
     pointerEvents: "none",
-});
-
-// 5) Hilangin garis
-tl.to(line, {
-    opacity: 0,
-    duration: 0.3,
 });
