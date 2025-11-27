@@ -23,10 +23,17 @@
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex space-x-4">
-            <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-            <x-nav-link href="/services" :active="request()->is('services')">Services</x-nav-link>
-            <x-nav-link href="/contact" :active="request()->is('contact')">Contact Us</x-nav-link>
+            <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+              Home
+            </x-nav-link>
+            <x-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
+              Services
+            </x-nav-link>
+            <x-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+              Contact Us
+            </x-nav-link>
           </div>
+
         </div>
       </div>
     </div>
@@ -34,9 +41,15 @@
 
   <div id="mobile-menu" class="overflow-hidden max-h-0 transition-all duration-300 ease-in-out sm:hidden">
     <div class="space-y-1 px-2 pt-2 pb-3">
-      <x-mobile-nav-link href="/" :active="request()->is('/')">Home</x-mobile-nav-link>
-      <x-mobile-nav-link href="/services" :active="request()->is('services')">Services</x-mobile-nav-link>
-      <x-mobile-nav-link href="/contact" :active="request()->is('contact')">Contact Us</x-mobile-nav-link>
+      <x-mobile-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+        Home
+      </x-mobile-nav-link>
+      <x-mobile-nav-link href="{{ route('services') }}" :active="request()->routeIs('services')">
+        Services
+      </x-mobile-nav-link>
+      <x-mobile-nav-link href="{{ route('contact') }}" :active="request()->routeIs('contact')">
+        Contact Us
+      </x-mobile-nav-link>
     </div>
   </div>
 

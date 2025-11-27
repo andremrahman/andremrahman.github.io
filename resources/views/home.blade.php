@@ -30,7 +30,7 @@
 
     {{-- button --}}
     <div class="w-full">
-      <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 flex justify-center md:justify-start">
+      <div class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8 flex justify-center md:justify-start">
 
         <a href="/services"
           class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
