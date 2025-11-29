@@ -7,14 +7,14 @@
     <img src="{{ asset('img/hero.webp') }}" alt="Hero Image"
       class="absolute inset-0 w-full h-full object-cover object-[70%_100%] md:object-center md:mask-l-from-20% mask-b-from-90%" />
 
-    <!-- Overlay gelap biar teks terbaca -->
+    <!-- Overlay gelap -->
     <div class="absolute inset-0 bg-black/30 md:hidden"></div>
 
     <!-- Konten teks -->
     <div class="w-full">
       <div class="max-w-7xl mx-auto mt-22 px-4 sm:px-6 lg:px-8 uppercase">
 
-        <div class="w-full md:w-1/2 relative z-10 flex flex-col items-start text-start h-full md:">
+        <div class="w-full md:w-1/2 relative z-10 flex flex-col items-start text-start h-full">
           <h1 class="text-base md:text-lg lg:text-xl">Welcome to</h1>
           <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-shadow-lg/50 hero-text">
             PT Gajahmada Karya Mandiri</h1>
@@ -32,8 +32,8 @@
     <div class="w-full">
       <div class="max-w-7xl mx-auto pt-8 pb-16 px-4 sm:px-6 lg:px-8 flex justify-center md:justify-start">
 
-        <a href="/services"
-          class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-gray-50 group">
+        <a href="{{ route('services') }}"
+          class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-neutral-200 group">
           <span
             class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>
           <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
@@ -110,7 +110,7 @@
 
               <p class="split mb-4">
                 <span>
-                  As a full-service general contractor, we handle end-to-end services—from planning and design to full
+                  As a full-service general contractor, we handle end-to-end services, from planning and design to full
                   project
                   execution, including joint operations with trusted local and international partners.
                 </span>
@@ -150,7 +150,7 @@
                 construction
                 projects, ensuring customer satisfaction
                 through consistent excellence in quality, on-time project
-                completion, and cost efficiency — all supported by reliable
+                completion, and cost efficiency, all supported by reliable
                 human resources and the use of the most effective
                 technologies.</span>
             </p>
@@ -212,5 +212,49 @@
       </div>
     </div>
   </section>
+
+
+
+  <section id="cta" class="relative min-h-[50vh] overflow-hidden flex items-center">
+    <img src="{{ asset('img/cta.webp') }}" alt="Hero Image"
+      class="absolute inset-0 w-full h-full object-cover object-[70%_100%] md:object-center" />
+    <div class="w-full">
+      <div class="mx-auto px-4 max-w-7xl py-16 md:py-32 sm:px-6 lg:px-8">
+        <div class="relative">
+          <h2
+            class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight title-anim perspective-normal font-oswald mb-4 text-black">
+            Ready to Build Something Great?
+          </h2>
+          <a href="{{ route('contact') }}"
+            class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-neutral-800 group font-oswald">
+            <span
+              class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>
+            <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </span>
+            <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+              <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </span>
+            <span
+              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">
+              Contact Us
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+
+
 
 </x-layout>

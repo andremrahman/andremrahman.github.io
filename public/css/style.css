@@ -18,7 +18,6 @@
     background-color: #dc2929;
 }
 
-/*? railtext */
 .outlined-text {
     color: black; /* Color of the text itself */
     text-shadow: -1px -1px 0 white, /* Top-left shadow */ 1px -1px 0 white,
