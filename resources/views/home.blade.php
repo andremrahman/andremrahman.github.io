@@ -217,13 +217,13 @@
 
   <section id="cta" class="relative min-h-[50vh] overflow-hidden flex items-center">
     <img src="{{ asset('img/cta.webp') }}" alt="Hero Image"
-      class="absolute inset-0 w-full h-full object-cover object-[70%_100%] md:object-center" />
+      class="absolute inset-0 w-full h-full object-cover object-[70%_40%] md:object-center" />
     <div class="w-full">
       <div class="mx-auto px-4 max-w-7xl py-16 md:py-32 sm:px-6 lg:px-8">
         <div class="relative">
           <h2
             class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight title-anim perspective-normal font-oswald mb-4 text-black">
-            Ready to Build Something Great?
+            Ready to build something great?
           </h2>
           <a href="{{ route('contact') }}"
             class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-neutral-800 group font-oswald">
