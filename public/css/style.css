@@ -67,6 +67,10 @@
     background-position: 50% 30%;
     background-attachment: fixed;
 
+    /* START FALLBACK: Jika properti knockout gagal, teks akan berwarna putih */
+    color: #f3f4f6; /* Fallback color: Gray 100/White */
+    /* END FALLBACK */
+
     /* MEMOTONG background HANYA pada bentuk teks */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

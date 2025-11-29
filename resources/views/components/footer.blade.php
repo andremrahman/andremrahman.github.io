@@ -6,9 +6,12 @@
     <h2 class="mb-8 font-oswald uppercase text-lg font-semibold">PT Gajahmada Karya Mandiri</h2>
     <div class="flex flex-col md:flex-row">
       <div class="w-full md:max-w-1/3 p-4 bg-neutral-700 flex flex-col justify-center rounded-2xl md:mr-4 mb-8 md:mb-0">
-        <a href="{{ route('home') }}" class="bg-neutral-900 px-3 py-2  rounded-t-md mb-0.5 text-sm">Home</a>
-        <a href="{{ route('services') }}" class="bg-neutral-900 px-3 p-2 mb-0.5 text-sm">Services</a>
-        <a href="{{ route('contact') }}" class="bg-neutral-900 px-3 p-2 rounded-b-md text-sm">Contact Us</a>
+        <a href="{{ route('home') }}"
+          class="bg-neutral-900 px-3 py-2 hover:bg-neutral-800  rounded-t-md mb-0.5 text-sm">Home</a>
+        <a href="{{ route('services') }}"
+          class="bg-neutral-900 px-3 p-2 hover:bg-neutral-800 mb-0.5 text-sm">Services</a>
+        <a href="{{ route('contact') }}"
+          class="bg-neutral-900 px-3 p-2 hover:bg-neutral-800 rounded-b-md text-sm">Contact Us</a>
       </div>
 
       <div class="w-full md:min-w-1/3 md:px-4 md:border-x mb-8 md:mb-0">
@@ -59,12 +62,12 @@
       <div class="w-full md:min-w-1/3 md:pl-4">
         <h2 class="font-semibold text-lg mb-2">Address</h2>
         <p class="text-sm">
-          Lucky Garden Blok A no.8 Seraya Batu Ampar, Kepulauan Riau, Indonesia, 29444
+          Lucky Garden Blok A No.8, Seraya Batu Ampar, Kepulauan Riau, Indonesia, 29444
         </p>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row justify-end my-16">
-      <h2 class="font-semibold text-lg mb-2 md:mr-4">Meet Us</h2>
+    <div class="flex flex-col md:flex-row justify-end my-6">
+      <h2 class="font-semibold text-lg mb-2 md:mr-4 md:flex md:items-center">Meet Us</h2>
       <div class="w-full md:w-1/3 aspect-4/3 px-8 md:px-0">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d708.948699606382!2d104.01519305582717!3d1.1513008134803364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9898ef442493f%3A0x884c0674a82335f4!2sPerumahan%20Lucky%20Garden!5e0!3m2!1sid!2sid!4v1764328821121!5m2!1sid!2sid"
@@ -73,6 +76,6 @@
       </div>
     </div>
     <hr class="mb-1">
-    <p class="text-xs text-neutral-300">&copy 2025 PT Gajahmada Karya Mandiri. All rights reserved</p>
+    <p class="text-xs text-neutral-300 text-center">&copy 2025 PT Gajahmada Karya Mandiri. All rights reserved.</p>
   </div>
 </footer>
