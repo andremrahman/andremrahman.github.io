@@ -7,11 +7,11 @@
     <div class="flex flex-col md:flex-row">
       <div class="w-full md:max-w-1/3 p-4 bg-neutral-700 flex flex-col justify-center rounded-2xl md:mr-4 mb-8 md:mb-0">
         <a href="{{ route('home') }}"
-          class="bg-neutral-900 px-3 py-2 hover:bg-neutral-800  rounded-t-md mb-0.5 text-sm">Home</a>
+          class="bg-neutral-900 px-3 py-2 hover:bg-neutral-800 active:bg-neutral-800 rounded-t-md mb-0.5 text-sm">Home</a>
         <a href="{{ route('services') }}"
-          class="bg-neutral-900 px-3 p-2 hover:bg-neutral-800 mb-0.5 text-sm">Services</a>
+          class="bg-neutral-900 px-3 p-2 hover:bg-neutral-800 active:bg-neutral-800 mb-0.5 text-sm">Services</a>
         <a href="{{ route('contact') }}"
-          class="bg-neutral-900 px-3 p-2 hover:bg-neutral-800 rounded-b-md text-sm">Contact Us</a>
+          class="bg-neutral-900 px-3 p-2 hover:bg-neutral-800 active:bg-neutral-800 rounded-b-md text-sm">Contact Us</a>
       </div>
 
       <div class="w-full md:min-w-1/3 md:px-4 md:border-x mb-8 md:mb-0">
