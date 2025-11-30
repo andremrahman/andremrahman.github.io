@@ -24,117 +24,120 @@
   <section id="services" class="bg-neutral-200 text-black">
     <div class="w-full">
       <div class="mx-auto px-4 max-w-7xl py-16 sm:px-6 lg:px-8 text-base">
-        <h2
-          class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight perspective-normal font-poppins mb-4 hero-text">
-          Our Services
-        </h2>
-        <p class="split">
-          Your project deserves trusted hands. Our comprehensive services bring together experience, technology, and
-          commitment to excellence. Discover the key services we proudly deliver:
-        </p>
-        <ul class="list-disc *:ml-6 font-semibold mt-2">
-          <li class="li-item">Spatial and Regional Planning</li>
-          <li class="li-item">Architecture</li>
-          <li class="li-item">Civil / Structural</li>
-          <li class="li-item">Road Engineering</li>
-          <li class="li-item">Bridge Engineering</li>
-          <li class="li-item">Geotechnical</li>
-          <li class="li-item">Mechanical</li>
-          <li class="li-item">Electrical</li>
-          <li class="li-item">Plumbing</li>
-          <li class="li-item">Other related services.</li>
-        </ul>
-
-        {{-- ? slider --}}
-        <div id="slider-container"
-          class="relative aspect-4/3 md:aspect-3/2 w-full md:max-w-3xl mx-auto flex items-center justify-center rounded-2xl mt-20 md:mt-10">
-
-          <button id="prevBtn"
-            class="absolute left-0 z-10 bg-black/30 text-white p-3 rounded-full transition duration-300 hover:bg-black/50 hover:scale-105 active:bg-black/50 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
-            </svg>
-          </button>
-
-          <div id="stack" class="relative w-full h-full flex justify-center items-center font-oswald">
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="0"
-              style="background-image: url({{ asset('img/slider/slide1.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Spatial and Regional Planning</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="1"
-              style="background-image: url({{ asset('img/slider/slide2.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Architecture</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="2"
-              style="background-image: url({{ asset('img/slider/slide3.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Civil / Structural</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="3"
-              style="background-image: url({{ asset('img/slider/slide4.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Road Engineering</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="4"
-              style="background-image: url({{ asset('img/slider/slide5.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Bridge Engineering</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="5"
-              style="background-image: url({{ asset('img/slider/slide6.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Geotechnical</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="6"
-              style="background-image: url({{ asset('img/slider/slide7.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Electrical and Mechanical</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="7"
-              style="background-image: url({{ asset('img/slider/slide8.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Plumbing</p>
-              </div>
-            </div>
-
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="8"
-              style="background-image: url({{ asset('img/slider/slide9.webp') }})">
-              <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Other related services</p>
-              </div>
-            </div>
-
+        <div class="flex flex-col lg:flex-row">
+          <div class="relative w-full lg:w-2/5">
+            <h2
+              class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight perspective-normal font-poppins mb-4 hero-text">
+              Our Services
+            </h2>
+            <p class="split">
+              Your project deserves trusted hands. Our comprehensive services bring together experience, technology, and
+              commitment to excellence. Discover the key services we proudly deliver:
+            </p>
+            <ul class="list-disc *:ml-6 font-semibold mt-2">
+              <li class="li-item">Spatial and Regional Planning</li>
+              <li class="li-item">Architecture</li>
+              <li class="li-item">Civil / Structural</li>
+              <li class="li-item">Road Engineering</li>
+              <li class="li-item">Bridge Engineering</li>
+              <li class="li-item">Geotechnical</li>
+              <li class="li-item">Mechanical</li>
+              <li class="li-item">Electrical</li>
+              <li class="li-item">Plumbing</li>
+              <li class="li-item">Other related services.</li>
+            </ul>
           </div>
 
-          <button id="nextBtn"
-            class="absolute right-0 z-10 bg-black/30 text-white p-3 rounded-full transition duration-300 hover:bg-black/50 hover:scale-105 active:bg-black/50 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          {{-- ? slider --}}
+          <div class="relative w-full lg:w-3/5 lg:self-end">
+            <div id="slider-container"
+              class="relative aspect-4/3 md:aspect-3/2 w-full md:max-w-2xl mx-auto flex items-center justify-center rounded-2xl mt-20 md:mt-10">
 
+              <button id="prevBtn"
+                class="absolute left-0 z-10 bg-black/30 text-white p-3 rounded-full transition duration-300 hover:bg-black/50 hover:scale-105 active:bg-black/50 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
+                </svg>
+              </button>
+
+              <div id="stack" class="relative w-full h-full flex justify-center items-center font-oswald">
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="0"
+                  style="background-image: url({{ asset('img/slider/slide1.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Spatial and Regional Planning</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="1"
+                  style="background-image: url({{ asset('img/slider/slide2.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Architecture</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="2"
+                  style="background-image: url({{ asset('img/slider/slide3.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Civil / Structural</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="3"
+                  style="background-image: url({{ asset('img/slider/slide4.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Road Engineering</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="4"
+                  style="background-image: url({{ asset('img/slider/slide5.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Bridge Engineering</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="5"
+                  style="background-image: url({{ asset('img/slider/slide6.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Geotechnical</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="6"
+                  style="background-image: url({{ asset('img/slider/slide7.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Electrical and Mechanical</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="7"
+                  style="background-image: url({{ asset('img/slider/slide8.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Plumbing</p>
+                  </div>
+                </div>
+
+                <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="8"
+                  style="background-image: url({{ asset('img/slider/slide9.webp') }})">
+                  <div class="slide-content relative z-10 p-6 text-white">
+                    <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Other related services</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <button id="nextBtn"
+                class="absolute right-0 z-10 bg-black/30 text-white p-3 rounded-full transition duration-300 hover:bg-black/50 hover:scale-105 active:bg-black/50 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
         </div>
-
-
       </div>
     </div>
   </section>
