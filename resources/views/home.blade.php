@@ -215,18 +215,21 @@
 
 
 
-  <section id="cta" class="relative min-h-[50vh] overflow-hidden flex items-center">
+  <section id="cta" class="relative min-h-[50vh] overflow-x-hidden flex items-center font-oswald">
     <img src="{{ asset('img/cta.webp') }}" alt="Hero Image"
-      class="absolute inset-0 w-full h-full object-cover object-[70%_40%] md:object-center" />
+      class="absolute inset-0 w-full h-full object-cover object-center md:object-center" />
+    <div class="absolute inset-0 bg-black/40"></div>
     <div class="w-full">
       <div class="mx-auto px-4 max-w-7xl py-16 md:py-32 sm:px-6 lg:px-8">
         <div class="relative">
-          <h2
-            class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight title-anim perspective-normal font-oswald mb-4 text-black">
+          <h2 class="text-4xl md:text-6xl lg:text-7xl leading-tight title-anim perspective-normal text-white">
             Ready to build something great?
           </h2>
+          <p class="mb-4 text-lg md:text-2xl"> Let’s bring your ideas to life and start creating something
+            extraordinary.
+          </p>
           <a href="{{ route('contact') }}"
-            class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-white transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-neutral-800 group font-oswald">
+            class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-neutral-200 group">
             <span
               class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>
             <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">

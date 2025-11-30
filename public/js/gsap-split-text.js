@@ -63,9 +63,10 @@ document.fonts.ready.then(() => {
                 ease: "power2.out",
                 scrollTrigger: {
                     trigger: item,
-                    start: "top 90%",
-                    end: "bottom 18%",
+                    start: "top 97%",
+                    end: "top 5%+=40px",
                     toggleActions: "play reverse play reverse",
+                    markers: true,
                 },
             }
         );

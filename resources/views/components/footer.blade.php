@@ -1,5 +1,5 @@
 <footer class="bg-inherit w-full font-montserrat border-t border-t-neutral-300">
-  <div class="mx-auto px-4 max-w-7xl mt-16 mb-4 sm:px-6 lg:px-8">
+  <div class="mx-auto px-4 max-w-7xl mt-8 md:mt-16 mb-4 sm:px-6 lg:px-8">
     <a href="{{ route('home') }}" class="inline-block">
       <img src="{{ asset('img/logo.png') }}" alt="logo" class="w-32 md:w-40 mb-1">
     </a>
