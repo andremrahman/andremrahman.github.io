@@ -1,32 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Memilih elemen
     const slides = document.querySelectorAll(".slide");
     const totalSlides = slides.length;
     const prevBtn = document.getElementById("prevBtn");
     const nextBtn = document.getElementById("nextBtn");
     const sliderContainer = document.getElementById("slider-container"); // Tambahkan pemilihan container
 
-    // Daftarkan ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
-    let currentIndex = 0; // Slide yang sedang berada di depan
-    let isAnimating = false; // Status untuk mencegah klik ganda/cepat
+    let currentIndex = 0;
+    let isAnimating = false;
 
     // --- Konfigurasi Autoplay ---
     let autoplayInterval = null;
-    let sliderInViewport = false; // Flag untuk melacak visibilitas
-    const autoplayDelay = 4000; // Jeda 4 detik (4000ms) - Jeda yang terbaik untuk UX umum
+    let sliderInViewport = false;
+    const autoplayDelay = 4000; // Jeda 4 detik (4000ms)
     // --------------------------
 
     // Ubah maxVisibleStack untuk tampilan yang lebih jelas
     const maxVisibleStack = 4; // Jumlah kartu yang terlihat di tumpukan (selain yang di depan)
-    // Durasi animasi dipercepat menjadi 0.4s
     const animationDuration = 0.4; // Durasi animasi dalam detik
 
     // Atur parameter tampilan tumpukan Vertikal/Tab
     const scaleStep = 0.05; // Pengurangan skala per kartu di belakang
     // Ditingkatkan menjadi -20 agar kartu lebih tinggi di tumpukan
-    const yOffsetStep = -20;
+    const yOffsetStep = -25;
     // Dipertahankan di -3 untuk mengurangi pergeseran horizontal (lebih tegak lurus)
     const xOffsetStep = -3;
 
@@ -114,10 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function goToNext() {
         // Blokir klik saat animasi berjalan
         if (isAnimating) return;
-
-        // Hentikan autoplay sementara saat ada transisi (kecuali jika dipicu oleh autoplay itu sendiri)
-        // Namun, karena Autoplay di handle oleh setInterval yang memanggil goToNext, kita tidak perlu stop/restart di sini
-        // Hanya perlu restart Autoplay setelah interaksi manual (tombol prev/next)
 
         isAnimating = true; // Set status animasi aktif
 

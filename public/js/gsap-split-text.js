@@ -22,7 +22,7 @@ document.fonts.ready.then(() => {
                 scrollTrigger: {
                     trigger: p,
                     start: "top 95%",
-                    end: "top 70%",
+                    end: "top 80%",
                     scrub: true,
                 },
             }).to(split.lines, {
@@ -66,7 +66,7 @@ document.fonts.ready.then(() => {
                     start: "top 97%",
                     end: "top 5%+=40px",
                     toggleActions: "play reverse play reverse",
-                    markers: true,
+                    // markers: true,
                 },
             }
         );

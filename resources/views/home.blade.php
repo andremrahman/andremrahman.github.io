@@ -216,7 +216,7 @@
 
 
   <section id="cta" class="relative min-h-[50vh] overflow-x-hidden flex items-center font-oswald">
-    <img src="{{ asset('img/cta.webp') }}" alt="Hero Image"
+    <img src="{{ asset('img/cta.webp') }}" alt="CTA"
       class="absolute inset-0 w-full h-full object-cover object-center md:object-center" />
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="w-full">

@@ -1,5 +1,4 @@
 body {
-    min-height: 100vh;
     overflow-x: hidden;
 }
 
@@ -31,28 +30,14 @@ body {
 }
 
 /*? knockout text */
-:root {
-    /* 1. Definisikan URL Gambar Latar Belakang sebagai variabel CSS */
-    --bg-url: url("/img/services.webp");
-}
-
-/* bg */
-.bg-knockout-image {
-    background-image: var(--bg-url);
-}
-
-/* Knockout Text */
 .knockout-text {
-    /* bg sama */
-    background-image: var(--bg-url);
-
     /* fallback */
     color: #f3f4f6;
 
     /* lobang bg */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; /* Standar */
+    background-clip: text;
 
     z-index: 10;
     position: relative;

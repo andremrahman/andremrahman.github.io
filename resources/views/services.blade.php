@@ -1,7 +1,8 @@
 <x-layout>
   <x-slot:title>{{ $title }}</x-slot:title>
   <section
-    class="min-h-[40vh] lg:min-h-[60vh] relative flex items-center justify-center bg-knockout-image bg-cover bg-position-[50%_30%] bg-fixed mt-16 overflow-x-hidden font-oswald">
+    class="min-h-[40vh] lg:min-h-[60vh] relative flex items-center justify-center bg-cover bg-position-[50%_30%] bg-fixed mt-16 overflow-x-hidden font-oswald"
+    style="background-image: url({{ asset('img/services.webp') }})">
 
     <!-- OVERLAY  -->
     <div class="absolute inset-0 bg-neutral-900 opacity-80"></div>
@@ -9,7 +10,8 @@
     <!-- text KNOCKOUT -->
     <div class="text-center p-8 z-20">
       <h1
-        class="knockout-text bg-cover bg-position-[50%_30%] bg-fixed text-7xl md:text-[10rem] lg:text-[12rem] font-semibold leading-none tracking-tight">
+        class="knockout-text bg-cover bg-position-[50%_30%] bg-fixed text-7xl md:text-[10rem] lg:text-[12rem] font-semibold leading-none tracking-tight"
+        style="background-image: url({{ asset('img/services.webp') }})">
         SERVICES
       </h1>
 
@@ -19,12 +21,14 @@
     </div>
   </section>
 
-
-
   <section id="services" class="bg-neutral-200 text-black">
     <div class="w-full">
       <div class="mx-auto px-4 max-w-7xl py-16 sm:px-6 lg:px-8 text-base">
-        <p class="hero-text split">
+        <h2
+          class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight perspective-normal font-poppins mb-4 hero-text">
+          Our Services
+        </h2>
+        <p class="split">
           Your project deserves trusted hands. Our comprehensive services bring together experience, technology, and
           commitment to excellence. Discover the key services we proudly deliver:
         </p>
@@ -41,72 +45,87 @@
           <li class="li-item">Other related services.</li>
         </ul>
 
-      </div>
-    </div>
-  </section>
-
-  {{-- todo slider --}}
-  <section id="section-slider" class="bg-neutral-900">
-    <div class="w-full">
-      <div class="mx-auto px-4 max-w-7xl pt-16 pb-8 sm:px-6 lg:px-8">
-
+        {{-- ? slider --}}
         <div id="slider-container"
-          class="relative h-[50vh] max-h-[500px] w-full max-w-3xl mx-auto flex items-center justify-center rounded-2xl shadow-2xl">
+          class="relative aspect-4/3 md:aspect-3/2 w-full md:max-w-3xl mx-auto flex items-center justify-center rounded-2xl mt-20 md:mt-10">
 
           <button id="prevBtn"
-            class="absolute left-0 z-50 bg-white/20 text-white p-3 rounded-full transition duration-300 hover:bg-white/40 hover:scale-105 active:bg-white/40 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
+            class="absolute left-0 z-10 bg-black/30 text-white p-3 rounded-full transition duration-300 hover:bg-black/50 hover:scale-105 active:bg-black/50 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"></path>
             </svg>
           </button>
 
-          <div id="stack" class="relative w-full h-full flex justify-center items-center">
+          <div id="stack" class="relative w-full h-full flex justify-center items-center font-oswald">
 
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="0" data-color="#EF4444"
-              style="background-image: url(https://picsum.photos/id/237/600/400)">
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="0"
+              style="background-image: url({{ asset('img/slider/slide1.webp') }})">
               <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-3xl font-extrabold mb-1 drop-shadow-md">Project Alpha</p>
-                <p class="text-lg font-light drop-shadow-sm">Ini adalah kartu utama yang terlihat.</p>
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Spatial and Regional Planning</p>
               </div>
             </div>
 
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="1" data-color="#F59E0B"
-              style="background-image: url(https://picsum.photos/id/1018/600/400)">
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="1"
+              style="background-image: url({{ asset('img/slider/slide2.webp') }})">
               <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-3xl font-extrabold mb-1 drop-shadow-md">Yellow Profile</p>
-                <p class="text-lg font-light drop-shadow-sm">Kartu ini berada tepat di belakang yang pertama.</p>
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Architecture</p>
               </div>
             </div>
 
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="2" data-color="#10B981"
-              style="background-image: url({{ asset('img/cta.webp') }})">
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="2"
+              style="background-image: url({{ asset('img/slider/slide3.webp') }})">
               <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-3xl font-extrabold mb-1 drop-shadow-md">Green Design</p>
-                <p class="text-lg font-light drop-shadow-sm">Tampilan minimalis dengan efek tumpukan yang dinamis.</p>
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Civil / Structural</p>
               </div>
             </div>
 
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="3" data-color="#3B82F6"
-              style="background-image: url({{ asset('img/about.webp') }}">
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="3"
+              style="background-image: url({{ asset('img/slider/slide4.webp') }})">
               <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-3xl font-extrabold mb-1 drop-shadow-md">Blue Concept</p>
-                <p class="text-lg font-light drop-shadow-sm">GSAP mengontrol skala, posisi Y, dan z-index.</p>
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Road Engineering</p>
               </div>
             </div>
 
-            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="4" data-color="#6366F1"
-              style="background-image: url(https://picsum.photos/id/1000/600/400)">
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="4"
+              style="background-image: url({{ asset('img/slider/slide5.webp') }})">
               <div class="slide-content relative z-10 p-6 text-white">
-                <p class="text-3xl font-extrabold mb-1 drop-shadow-md">Indigo Flow</p>
-                <p class="text-lg font-light drop-shadow-sm">Selamat menikmati slider GSAP baru Anda!</p>
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Bridge Engineering</p>
+              </div>
+            </div>
+
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="5"
+              style="background-image: url({{ asset('img/slider/slide6.webp') }})">
+              <div class="slide-content relative z-10 p-6 text-white">
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Geotechnical</p>
+              </div>
+            </div>
+
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="6"
+              style="background-image: url({{ asset('img/slider/slide7.webp') }})">
+              <div class="slide-content relative z-10 p-6 text-white">
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Electrical and Mechanical</p>
+              </div>
+            </div>
+
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="7"
+              style="background-image: url({{ asset('img/slider/slide8.webp') }})">
+              <div class="slide-content relative z-10 p-6 text-white">
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Plumbing</p>
+              </div>
+            </div>
+
+            <div class="slide w-11/12 h-5/6 rounded-xl shadow-lg" data-index="8"
+              style="background-image: url({{ asset('img/slider/slide9.webp') }})">
+              <div class="slide-content relative z-10 p-6 text-white">
+                <p class="text-2xl md:text-4xl font-semibold mb-1 drop-shadow-md">Other related services</p>
               </div>
             </div>
 
           </div>
 
           <button id="nextBtn"
-            class="absolute right-0 z-50 bg-white/20 text-white p-3 rounded-full transition duration-300 hover:bg-white/40 hover:scale-105 active:bg-white/40 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
+            class="absolute right-0 z-10 bg-black/30 text-white p-3 rounded-full transition duration-300 hover:bg-black/50 hover:scale-105 active:bg-black/50 active:scale-105 transform -translate-y-1/2 top-1/2 backdrop-blur-sm border border-white/30">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"></path>
@@ -114,15 +133,53 @@
           </button>
 
         </div>
+
+
       </div>
     </div>
   </section>
 
+  {{-- cta --}}
+  <section class="relative min-h-[50vh] overflow-x-hidden flex items-center font-oswald">
+    <img src="{{ asset('img/cta2.webp') }}" alt="call to action"
+      class="absolute inset-0 w-full h-full object-cover object-center md:object-center" />
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="w-full">
+      <div class="mx-auto px-4 max-w-7xl py-16 md:py-32 sm:px-6 lg:px-8">
+        <div class="relative">
+          <h2 class="text-4xl md:text-6xl lg:text-7xl leading-tight perspective-normal text-white">
+            Your next great project starts here.
+          </h2>
+          <p class="mb-4 text-lg md:text-2xl"> Expert guidance for every step of your project.
+          </p>
+          <a href="{{ route('contact') }}"
+            class="relative inline-flex items-center justify-start py-3 pl-4 pr-12 overflow-hidden font-semibold text-black transition-all duration-150 ease-in-out rounded hover:pl-10 hover:pr-6 bg-neutral-200 group">
+            <span
+              class="absolute bottom-0 left-0 w-full h-1 transition-all duration-100 ease-in-out bg-merah group-hover:h-full group-active:h-full"></span>
+            <span class="absolute right-0 pr-4 duration-200 ease-out group-hover:translate-x-12">
+              <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </span>
+            <span class="absolute left-0 pl-2.5 -translate-x-12 group-hover:translate-x-0 ease-out duration-200">
+              <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3">
+                </path>
+              </svg>
+            </span>
+            <span
+              class="relative w-full text-left transition-colors duration-200 ease-in-out group-hover:text-white group-active:text-white">
+              Get In Touch
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
 
-  {{-- <section id="services" class="min-h-screen">
-    <img src="{{ asset('img/services.webp') }}" alt="Services"
-      class="absolute inset-0 top-16 w-full h-full object-cover object-[50%_30%] max-h-[40vh] lg:max-h-[60vh]" />
-    
-  </section> --}}
+    </div>
+  </section>
 
 </x-layout>
