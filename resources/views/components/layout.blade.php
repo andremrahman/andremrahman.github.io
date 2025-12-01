@@ -28,9 +28,9 @@
 
   <x-footer></x-footer>
 
-  {{-- gsap --}}
+  gsap global
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  {{-- <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 
   <script src="{{ asset('js/gsap-hero-text.js') }}"></script>
@@ -38,8 +38,12 @@
   <script src="{{ asset('js/gsap-text-scroll-roll.js') }}"></script>
   <script src="{{ asset('js/gsap-split-text-title.js') }}"></script>
   <script src="{{ asset('js/gsap-split-text.js') }}"></script>
-  <script src="{{ asset('js/gsap-slider.js') }}"></script>
+  <script src="{{ asset('js/gsap-slider.js') }}"></script> --}}
 
+  {{-- scripts tambahan per halaman --}}
+  @stack('scripts')
+
+  {{-- script global --}}
   <script src="{{ asset('js/script.js') }}"></script>
 </body>
 

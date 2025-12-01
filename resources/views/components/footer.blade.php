@@ -1,5 +1,5 @@
 <footer class="bg-inherit w-full font-montserrat border-t border-t-neutral-300">
-  <div class="mx-auto px-4 max-w-7xl mt-8 md:mt-16 mb-4 sm:px-6 lg:px-8">
+  <div class="mx-auto px-4 max-w-7xl mt-8 md:mt-16 mb-8 sm:px-6 lg:px-8">
     <a href="{{ route('home') }}" class="inline-block">
       <img src="{{ asset('img/logo.png') }}" alt="logo" class="w-32 md:w-40 mb-1">
     </a>
@@ -66,9 +66,9 @@
         </p>
       </div>
     </div>
-    <div class="flex flex-col md:flex-row justify-end my-6">
-      <h2 class="font-semibold text-lg mb-2 md:mr-4 md:flex md:items-center">Meet Us</h2>
-      <div class="w-full md:w-1/3 aspect-4/3 px-8 md:px-0">
+    <div class="my-6">
+      <h2 class="mx-auto w-full md:w-1/3 font-semibold text-lg mb-2 md:text-center">Meet Us on Maps</h2>
+      <div class="mx-auto w-6/7 md:w-2/7 aspect-4/3">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d708.948699606382!2d104.01519305582717!3d1.1513008134803364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d9898ef442493f%3A0x884c0674a82335f4!2sPerumahan%20Lucky%20Garden!5e0!3m2!1sid!2sid!4v1764328821121!5m2!1sid!2sid"
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"

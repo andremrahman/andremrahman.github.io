@@ -16,7 +16,7 @@
 
         <div class="w-full md:w-1/2 relative z-10 flex flex-col items-start text-start h-full">
           <h1 class="text-base md:text-lg lg:text-xl">Welcome to</h1>
-          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-shadow-lg/50 hero-text">
+          <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold text-shadow-lg/50">
             PT Gajahmada Karya Mandiri</h1>
           <p class="text-base md:text-lg lg:text-xl my-2">We Build
             More Than
@@ -197,12 +197,13 @@
             <h2
               class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight title-anim perspective-normal font-poppins mb-4 border-t-2 inline-block">
               Our Team</h2>
-            <p class="split mb-4">Our team is strongly committed to delivering every project with the highest level of
+            <p class="split mb-4 text-base md:text-lg lg:text-xl text-start">Our team is strongly committed to
+              delivering every project with the highest level of
               expertise. We bring
               together
               professionals from various disciplines to ensure the quality we provide to our clients.
             </p>
-            <p class="split mb-4">
+            <p class="split mb-4 text-base md:text-lg lg:text-xl text-start">
               We continuously invest in our people by creating an environment that encourages growth and learning. With
               a
               responsive and solution-oriented approach, we aim to meet partner expectations both now and in the future.
@@ -258,6 +259,13 @@
     </div>
   </section>
 
+  @push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
 
-
+    <script src="{{ asset('js/gsap-section.js') }}"></script>
+    <script src="{{ asset('js/gsap-text-scroll-roll.js') }}"></script>
+    <script src="{{ asset('js/gsap-split-text-title.js') }}"></script>
+    <script src="{{ asset('js/gsap-split-text.js') }}"></script>
+  @endpush
 </x-layout>

@@ -26,8 +26,7 @@
       <div class="mx-auto px-4 max-w-7xl py-16 sm:px-6 lg:px-8 text-base">
         <div class="flex flex-col lg:flex-row">
           <div class="relative w-full lg:w-2/5">
-            <h2
-              class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight perspective-normal font-poppins mb-4 hero-text">
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight perspective-normal font-poppins mb-4">
               Our Services
             </h2>
             <p class="split">
@@ -185,4 +184,11 @@
     </div>
   </section>
 
+  @push('scripts')
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+
+    <script src="{{ asset('js/gsap-slider.js') }}"></script>
+    <script src="{{ asset('js/gsap-split-text.js') }}"></script>
+  @endpush
 </x-layout>
