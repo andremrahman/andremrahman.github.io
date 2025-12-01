@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  @vite('resources/css/app.css')
+  @vite(['resources/css/app.css'])
   <link rel="icon" type="image/png" href="{{ asset('img/favicon.png') }}" />
 
   {{-- ? preload css --}}
@@ -35,7 +35,7 @@
   <x-footer></x-footer>
 
   {{-- gsap global --}}
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="{{ asset('js/vendor/gsap.min.js') }}"></script>
 
   {{-- script js preload --}}
   <script src="{{ asset('js/preload.js') }}"></script>

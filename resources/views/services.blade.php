@@ -185,8 +185,8 @@
   </section>
 
   @push('scripts')
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="{{ asset('js/vendor/ScrollTrigger.min.js') }}"></script>
+    <script src="{{ asset('js/vendor/SplitText.min.js') }}"></script>
 
     <script src="{{ asset('js/gsap-slider.js') }}"></script>
     <script src="{{ asset('js/gsap-split-text.js') }}"></script>
