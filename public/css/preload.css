@@ -1,9 +1,9 @@
 /* Konfigurasi kustom */
 :root {
-    --primary-color: #fbbf24; /* Amber 400 */
-    --dark-bg: #111827; /* Gray 900 */
-    --preloader-panel-color: #e5e7eb; /* Neutral 200 - Warna panel yang terungkap */
-    --swipe-color: #0000ff; /* Warna biru untuk tirai swipe */
+    --primary-color: #dc2929;
+    /* --dark-bg: #111827; */
+    --preloader-panel-color: #e5e7eb;
+    --swipe-color: oklch(26.9% 0 0);
 }
 
 /* Kelas untuk mengunci scrolling (PENTING saat preloader aktif) */
@@ -43,15 +43,15 @@
 
 /* Style untuk Logo Gambar */
 #logo-image {
-    width: 150px;
-    height: 50px;
+    /* width: 150px;
+    height: 50px; */
     object-fit: contain;
     margin-bottom: 1.5rem;
 }
 
 /* Animasi Spinner Sederhana */
 .spinner {
-    border: 8px solid rgba(0, 0, 0, 0.1);
+    border: 8px solid rgba(0, 0, 0, 0.3);
     border-top: 8px solid var(--primary-color);
     border-radius: 50%;
     width: 60px;
@@ -69,7 +69,7 @@
     }
 }
 
-/* --- STYLES STRUKTUR 6 KOLOM UNTUK SWIPE --- */
+/* tirai */
 
 .hero__inner {
     position: absolute;
@@ -82,19 +82,17 @@
 
 .hero__image-cont {
     position: relative;
-    /* KRITIS: overflow: hidden memastikan kelebihan width di-clip */
     overflow: hidden;
     background-color: var(--preloader-panel-color);
     will-change: transform;
 }
 
-/* Tirai Animasi Swipe (Menggunakan 105% untuk mengatasi celah sub-piksel) */
 .anim-swipe {
     position: absolute;
     width: 105%;
-    height: 100%;
+    height: 102%;
     top: 0;
-    left: -2.5%; /* Menempatkan tirai di tengah untuk tumpang tindih 2.5% di setiap sisi */
+    left: -2.5%;
     background-color: var(--swipe-color);
     z-index: 20000;
     will-change: transform;
