@@ -36,7 +36,7 @@
         swipeElements,
         {
             yPercent: 0,
-            duration: 1.0,
+            duration: 0.5,
             stagger: { from: "random", each: 0.15 },
             ease: "power4.inOut",
         },
@@ -118,7 +118,7 @@
         preloaderWrapper,
         {
             opacity: 0,
-            duration: 0.5,
+            duration: 0.3,
             ease: "power1.out",
         },
         "-=0.7"
