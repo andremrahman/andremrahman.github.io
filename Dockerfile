@@ -1,80 +1,48 @@
-# ================================
-# 1. Base Image: PHP 8.2 FPM
-# ================================
+# 1. Base PHP + FPM
 FROM php:8.2-fpm
 
-# ================================
-# 2. Install dependencies
-# ================================
+# 2. Install Tools & Extensions
 RUN apt-get update && apt-get install -y \
     git \
     curl \
+    zip \
+    unzip \
+    nginx \
+    nodejs \
+    npm \
     libpng-dev \
     libonig-dev \
     libxml2-dev \
-    zip \
-    unzip \
-    supervisor \
-    nginx \
-    --no-install-recommends \
-    && rm -rf /var/lib/apt/lists/*
+    --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-# ================================
-# 3. Install Node.js (NodeSource)
-# ================================
-RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
-    && apt-get install -y nodejs
+RUN docker-php-ext-install pdo pdo_mysql mbstring gd
 
-# ================================
-# 4. Install Composer
-# ================================
+# 3. Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# ================================
-# 5. Set Working Directory
-# ================================
+# 4. Workdir
 WORKDIR /var/www/html
 
-# ================================
-# 6. Copy project files
-# ================================
-COPY . /var/www/html
+# 5. Copy files
+COPY . .
 
-# ================================
-# 7. Install PHP & Node dependencies
-# ================================
+# 6. Install PHP & Node dependency
 RUN composer install --no-dev --optimize-autoloader
+RUN npm install && npm run build
 
-RUN npm install
-RUN npm run build
+# 7. Remove default Nginx config (kadang file ini tidak ada → AMAN kalau menggunakan -f)
+RUN rm -f /etc/nginx/conf.d/default.conf
 
-# ================================
-# 8. Fix permissions
-# ================================
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
-    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+# 8. Copy Nginx config kita
+COPY nginx.conf /etc/nginx/conf.d/app.conf
 
-# ================================
-# 9. Nginx config
-# ================================
-# Hapus default Nginx config (path benar untuk Debian-based nginx)
-RUN rm -f /etc/nginx/sites-enabled/default
+# 9. Permissions
+RUN chown -R www-data:www-data storage bootstrap/cache
 
-# Copy config kita
-COPY nginx.conf /etc/nginx/sites-enabled/app.conf
-
-# ================================
-# 10. Entrypoint Script
-# ================================
+# 10. Copy Entrypoint
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# ================================
-# 11. Expose port untuk Render
-# ================================
 EXPOSE 80
 
-# ================================
-# 12. Start Nginx + PHP-FPM
-# ================================
 CMD ["entrypoint.sh"]
