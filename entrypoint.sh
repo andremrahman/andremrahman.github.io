@@ -1,10 +1,7 @@
-#!/bin/bash
-set -e
+#!/bin/sh
 
-# Jalankan PHP FPM di background
-echo "Starting PHP-FPM..."
-php-fpm -D
+# Start PHP-FPM
+php-fpm &
 
-# Jalankan Nginx di foreground
-echo "Starting Nginx..."
-exec nginx -g "daemon off;"
+# Start Nginx
+nginx -g "daemon off;"

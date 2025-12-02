@@ -1,7 +1,11 @@
-# 1. Gunakan image PHP FPM (Base)
+# ================================
+# 1. Base Image: PHP 8.2 FPM
+# ================================
 FROM php:8.2-fpm
 
-# 2. Instal dependensi sistem, TERMASUK NGINX
+# ================================
+# 2. Install dependencies
+# ================================
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -10,44 +14,67 @@ RUN apt-get update && apt-get install -y \
     libxml2-dev \
     zip \
     unzip \
-    nodejs \
-    npm \
+    supervisor \
     nginx \
-    --no-install-recommends && rm -rf /var/lib/apt/lists/*
+    --no-install-recommends \
+    && rm -rf /var/lib/apt/lists/*
 
-# 3. Instal Composer
+# ================================
+# 3. Install Node.js (NodeSource)
+# ================================
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs
+
+# ================================
+# 4. Install Composer
+# ================================
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-# 4. Atur direktori kerja
+# ================================
+# 5. Set Working Directory
+# ================================
 WORKDIR /var/www/html
 
-# 5. Salin semua source code
+# ================================
+# 6. Copy project files
+# ================================
 COPY . /var/www/html
 
-# 6. JALANKAN SEMUA PERINTAH BUILD (Composer dan Vite/Tailwind)
-RUN composer install --no-dev
+# ================================
+# 7. Install PHP & Node dependencies
+# ================================
+RUN composer install --no-dev --optimize-autoloader
+
 RUN npm install
-# Hati-hati, pastikan perintah ini sesuai dengan package.json Anda, umumnya 'build'
-RUN npm run build 
+RUN npm run build
 
-# 7. Konfigurasi NGINX
-# Hapus konfigurasi default Nginx
-RUN rm /etc/nginx/conf.d/default.conf
+# ================================
+# 8. Fix permissions
+# ================================
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
 
-# Salin konfigurasi Nginx kustom kita (membutuhkan file nginx.conf)
-COPY nginx.conf /etc/nginx/conf.d/app.conf
+# ================================
+# 9. Nginx config
+# ================================
+# Hapus default Nginx config (path benar untuk Debian-based nginx)
+RUN rm -f /etc/nginx/sites-enabled/default
 
-# Atur izin file untuk Laravel
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-RUN chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+# Copy config kita
+COPY nginx.conf /etc/nginx/sites-enabled/app.conf
 
-# 8. Entrypoint Script
-# Salin entrypoint script (membutuhkan file entrypoint.sh) dan berikan izin eksekusi
+# ================================
+# 10. Entrypoint Script
+# ================================
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-# 9. Ekspor Port Nginx (Port yang dicari Render)
+# ================================
+# 11. Expose port untuk Render
+# ================================
 EXPOSE 80
 
-# 10. Perintah startup: Gunakan Entrypoint Script untuk menjalankan Nginx dan PHP-FPM
+# ================================
+# 12. Start Nginx + PHP-FPM
+# ================================
 CMD ["entrypoint.sh"]
