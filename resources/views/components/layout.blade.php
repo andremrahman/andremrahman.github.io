@@ -19,7 +19,10 @@
   <link rel="stylesheet" href="{{ asset('css/gsap-slider.css') }}">
 
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
   <title>{{ $title }}</title>
+  <meta name="description" content="@yield('meta_description', 'PT Gajahmada Karya Mandiri is a full-service general contractor leading the planning and construction of major infrastructure, commercial buildings, and residential projects.')">
+  <link rel="canonical" href="https://gajahmada.asia/">
 </head>
 
 <body class="overflow-x-hidden text-white bg-black no-scroll">
