@@ -77,23 +77,37 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+
+    gap: 0;
+    column-gap: 0;
+
     z-index: 19999;
 }
 
 .hero__image-cont {
     position: relative;
     overflow: hidden;
-    background-color: var(--preloader-panel-color);
-    will-change: transform;
+    /* Pastikan elemen mengisi seluruh sel grid */
+    width: 100%;
+    height: 100%;
+    /* Pastikan tidak ada margin/padding yang mengganggu di dalam sel */
+    padding: 0;
+    margin: 0;
+    /* ... */
 }
 
 .anim-swipe {
     position: absolute;
-    width: 105%;
-    height: 102%;
-    top: 0;
-    left: -2.5%;
+    /* Ganti ukuran kembali ke 100% dan tambahkan padding atau margin negatif */
+    width: calc(100% + 100px); /* 100% dari parent + sedikit ekstra */
+    height: calc(100% + 100px); /* 100% dari parent + sedikit ekstra */
+
+    /* Geser elemen sedikit ke kiri-atas */
+    top: -50px;
+    left: -50px;
+
     background-color: var(--swipe-color);
     z-index: 20000;
+    transform: translateZ(0); /* Memaksa browser menggunakan GPU */
     will-change: transform;
 }
