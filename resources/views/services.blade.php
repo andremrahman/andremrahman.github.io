@@ -5,7 +5,7 @@
     civil, building, and EPC projects. Quality and safety assured.'))
 
     <section
-      class="min-h-[40vh] lg:min-h-[60vh] relative flex items-center justify-center bg-cover bg-position-[50%_30%] bg-fixed mt-16 overflow-x-hidden font-oswald"
+      class="min-h-[40vh] lg:min-h-[60vh] relative flex items-center justify-center bg-cover bg-position-[50%_30%] bg-fixed pt-16 overflow-x-hidden font-oswald"
       style="background-image: url({{ asset('img/services.webp') }})">
 
       <!-- OVERLAY  -->
